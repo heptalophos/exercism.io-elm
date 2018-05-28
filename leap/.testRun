@@ -1,0 +1,17 @@
+Success! Compiled 1 module.
+Successfully generated /dev/null
+Success! Compiled 1 module.
+Successfully generated ~\exercism\elm\leap\elm-stuff\generated-code\elm-community\elm-test\elmTestOutput.js
+
+elm-test 0.18.12
+----------------
+
+Running 7 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 1836177213
+
+
+TEST RUN PASSED
+
+Duration: 1220 ms
+Passed:   7
+Failed:   0
+
