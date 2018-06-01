@@ -1,17 +1,17 @@
-Success! Compiled 55 modules.
+Success! Compiled 0 modules.
 Successfully generated /dev/null
-Success! Compiled 16 modules.
+Success! Compiled 1 module.
 Successfully generated ~\exercism\elm\triangle\elm-stuff\generated-code\elm-community\elm-test\elmTestOutput.js
 
 elm-test 0.18.12
 ----------------
 
-Running 2 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 34792684
+Running 16 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 1066877026
 
 
-TEST RUN INCOMPLETE because Test.skip was used
+TEST RUN PASSED
 
-Duration: 853 ms
-Passed:   2
+Duration: 2763 ms
+Passed:   16
 Failed:   0
 

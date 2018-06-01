@@ -17,10 +17,10 @@ version =
 triangleKind : comparable -> comparable -> comparable -> Result String Triangle
 triangleKind x y z =
         if (x <= 0 || y <= 0 || z <= 0) then
-            Result.Err "Invalid side"
+            Result.Err "Invalid lengths"
         else
         if (x + y < z || x + z < y || y + z < x) then
-            Result.Err "Violated Triangle Inequality"
+            Result.Err "Violates inequality"
         else 
             if (x + y == z || x + z == y || y + z == x) then
             Result.Ok Degenerate
