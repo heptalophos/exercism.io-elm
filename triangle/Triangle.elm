@@ -19,6 +19,8 @@ triangleKind x y z =
         if (x <= 0 || y <= 0 || z <= 0) then
             Result.Err "Invalid lengths"
         else
+        -- Maybe.withDefault 0 (List.head sides)
+        -- List.sum (Maybe.withDefault [ 0 ] (List.tail sides)))
         if (x + y < z || x + z < y || y + z < x) then
             Result.Err "Violates inequality"
         else 
