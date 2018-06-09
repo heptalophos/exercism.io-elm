@@ -12,6 +12,8 @@ value ch = Maybe.withDefault 0 (Dict.get ch letterScores)
 scoreWord : String -> Int
 scoreWord x = String.toUpper x
                 |> String.split ""
-                |> List.map value
-                |> List.sum
+                |> List.foldl (\n acc -> acc + (value n)) 0
+                -- or alternatively...
+                -- |> List.map value
+                -- |> List.sum
    

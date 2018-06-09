@@ -15,3 +15,20 @@ Duration: 3858 ms
 Passed:   11
 Failed:   0
 
+Success! Compiled 0 modules.
+Successfully generated /dev/null
+Success! Compiled 1 module.
+Successfully generated ~\exercism\elm\scrabble-score\elm-stuff\generated-code\elm-community\elm-test\elmTestOutput.js
+
+elm-test 0.18.12
+----------------
+
+Running 11 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 201111251
+
+
+TEST RUN PASSED
+
+Duration: 3995 ms
+Passed:   11
+Failed:   0
+
