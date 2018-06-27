@@ -1,0 +1,17 @@
+Success! Compiled 55 modules.
+Successfully generated /dev/null
+Success! Compiled 16 modules.
+Successfully generated ~\exercism\elm\space-age\elm-stuff\generated-code\elm-community\elm-test\elmTestOutput.js
+
+elm-test 0.18.12
+----------------
+
+Running 8 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 1283614138
+
+
+TEST RUN PASSED
+
+Duration: 886 ms
+Passed:   8
+Failed:   0
+
