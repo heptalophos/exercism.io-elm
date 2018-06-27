@@ -1,0 +1,17 @@
+Success! Compiled 0 modules.
+Successfully generated /dev/null
+Success! Compiled 1 module.
+Successfully generated ~\exercism\elm\anagram\elm-stuff\generated-code\elm-community\elm-test\elmTestOutput.js
+
+elm-test 0.18.12
+----------------
+
+Running 20 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 1517124273
+
+
+TEST RUN PASSED
+
+Duration: 639 ms
+Passed:   20
+Failed:   0
+
