@@ -1,0 +1,17 @@
+Success! Compiled 26 modules.
+Successfully generated /dev/null
+Success! Compiled 16 modules.
+Successfully generated ~\exercism\elm\difference-of-squares\elm-stuff\generated-code\elm-community\elm-test\elmTestOutput.js
+
+elm-test 0.18.12
+----------------
+
+Running 10 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 1791896307
+
+
+TEST RUN PASSED
+
+Duration: 3363 ms
+Passed:   10
+Failed:   0
+
