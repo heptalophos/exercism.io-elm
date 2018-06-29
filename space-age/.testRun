@@ -6,12 +6,12 @@ Successfully generated ~\exercism\elm\space-age\elm-stuff\generated-code\elm-com
 elm-test 0.18.12
 ----------------
 
-Running 8 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 1283614138
+Running 8 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 846364013
 
 
 TEST RUN PASSED
 
-Duration: 886 ms
+Duration: 697 ms
 Passed:   8
 Failed:   0
 
