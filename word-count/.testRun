@@ -1,17 +1,17 @@
 Success! Compiled 0 modules.
 Successfully generated /dev/null
 Success! Compiled 1 module.
-Successfully generated C:\Users\Chris\exercism\elm\word-count\elm-stuff\generated-code\elm-community\elm-test\elmTestOutput.js
+Successfully generated ~\exercism\elm\word-count\elm-stuff\generated-code\elm-community\elm-test\elmTestOutput.js
 
 elm-test 0.18.12
 ----------------
 
-Running 6 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 959881608
+Running 6 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 1148443417
 
 
 TEST RUN PASSED
 
-Duration: 2453 ms
+Duration: 2141 ms
 Passed:   6
 Failed:   0
 
