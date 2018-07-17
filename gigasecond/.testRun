@@ -1,0 +1,34 @@
+Success! Compiled 0 modules.
+Successfully generated /dev/null
+Success! Compiled 1 module.
+Successfully generated ~\exercism\elm\gigasecond\elm-stuff\generated-code\elm-community\elm-test\elmTestOutput.js
+
+elm-test 0.18.12
+----------------
+
+Running 5 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 504549468
+
+
+TEST RUN PASSED
+
+Duration: 2252 ms
+Passed:   5
+Failed:   0
+
+Success! Compiled 0 modules.
+Successfully generated /dev/null
+Success! Compiled 1 module.
+Successfully generated ~\exercism\elm\gigasecond\elm-stuff\generated-code\elm-community\elm-test\elmTestOutput.js
+
+elm-test 0.18.12
+----------------
+
+Running 5 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 929835777
+
+
+TEST RUN PASSED
+
+Duration: 2258 ms
+Passed:   5
+Failed:   0
+
