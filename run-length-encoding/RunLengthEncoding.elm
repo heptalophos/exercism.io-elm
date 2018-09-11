@@ -35,7 +35,3 @@ encode string = encodeRec "" 0 (string |> String.split "")
 
 decode : String -> String
 decode string = decodeRec "" (string |> String.toList)
-
-
-
-

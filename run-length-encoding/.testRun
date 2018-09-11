@@ -15,3 +15,20 @@ Duration: 4121 ms
 Passed:   15
 Failed:   0
 
+Success! Compiled 55 modules.
+Successfully generated /dev/null
+Success! Compiled 16 modules.
+Successfully generated ~\exercism\elm\run-length-encoding\elm-stuff\generated-code\elm-community\elm-test\elmTestOutput.js
+
+elm-test 0.18.12
+----------------
+
+Running 15 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 204532984
+
+
+TEST RUN PASSED
+
+Duration: 7061 ms
+Passed:   15
+Failed:   0
+
