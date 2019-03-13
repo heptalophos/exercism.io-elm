@@ -15,3 +15,44 @@ Duration: 2253 ms
 Passed:   20
 Failed:   0
 
+
+elm-test 0.19.0-rev5
+--------------------
+
+Running 28 tests. To reproduce these results, run: 
+     elm-test --fuzz 100 --seed 64771307157759 ~\exercism\elm\bob\tests\Tests.elm
+
+> Tests
+> Bob
+> ending with whitespace
+
+     έΨ╝έΨ╝έΨ╝έΨ╝έΨ╝έΨ╝έΨ╝   
+    "Whatever."
+    έΧ╖
+    έΦΓ Expect.equal
+    έΧ╡
+    "Sure."
+     έΨ▓έΨ▓έΨ▓   
+
+
+
+TEST RUN FAILED
+
+Duration: 555 ms
+Passed:   27
+Failed:   1
+
+
+elm-test 0.19.0-rev6
+--------------------
+
+Running 28 tests. To reproduce these results, run: 
+     elm-test --fuzz 100 --seed 211115763719598 ~\exercism\elm\bob\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 376 ms
+Passed:   28
+Failed:   0
+

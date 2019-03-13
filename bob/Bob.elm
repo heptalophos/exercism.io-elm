@@ -4,16 +4,20 @@ import Char exposing (isLower, isUpper)
 import String exposing (all, endsWith, filter, isEmpty, trim)
 
 hey : String -> String
-hey remark = if (shouting remark && question remark) then
-                "Calm down, I know what I'm doing!"
-             else if shouting remark then
-                "Whoa, chill out!"
-             else if question remark then 
-                "Sure."
-             else if silence remark then
-                "Fine. Be that way!"
-             else
-                "Whatever."
+hey remark = let 
+                trimmed =
+                    String.trim remark 
+             in
+                if (shouting trimmed && question trimmed) then
+                    "Calm down, I know what I'm doing!"
+                else if shouting trimmed then
+                    "Whoa, chill out!"
+                else if question trimmed then 
+                    "Sure."
+                else if silence trimmed then
+                    "Fine. Be that way!"
+                else
+                    "Whatever."
     
 
 silence : String -> Bool
