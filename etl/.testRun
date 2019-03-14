@@ -1,0 +1,14 @@
+
+elm-test 0.19.0-rev6
+--------------------
+
+Running 4 tests. 
+To reproduce these results, run: elm-test --fuzz 100 --seed 281009083601593 ~\exercism\elm\etl\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 909 ms
+Passed:   4
+Failed:   0
+
