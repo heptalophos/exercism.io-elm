@@ -1,7 +1,7 @@
 module Sublist exposing (ListComparison(..), sublist)
 
 import List exposing(foldr)
-import String exposing(contains, fromInt)
+import String exposing(contains)
 
 type ListComparison
     = Equal
@@ -10,13 +10,13 @@ type ListComparison
     | Unequal
 
 
-sublist : List Int -> List Int -> ListComparison
+sublist : List a -> List a -> ListComparison
 sublist alist blist = 
     let 
-        a = alist |> foldr (fromInt >> (++)) ""
-        b = blist |> foldr (fromInt >> (++)) ""
+        xs = alist |> foldr (Debug.toString >> (++)) ""
+        ys = blist |> foldr (Debug.toString >> (++)) ""
     in 
-        if a == b then Equal
-        else if contains a b then Sublist
-        else if contains b a then Superlist
+        if xs == ys then Equal
+        else if contains xs ys then Sublist
+        else if contains ys xs then Superlist
         else Unequal
