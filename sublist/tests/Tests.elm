@@ -63,7 +63,7 @@ tests =
                 \() -> Expect.equal Unequal (sublist [ 1, 2, 1, 2, 3 ] [ 1, 2, 3, 1, 2, 3, 2, 3, 2, 1 ])
         , -- skip <|  
             test "superlist in middle - non-integer list" <|
-                \() -> Expect.equal Superlist (sublist [ '5', '4', '3', '2', '1' ] [ '4', '3', '2' ])
+                \() -> Expect.equal Superlist (sublist [ 'J', '4', 'F', '2', '1' ] [ '4', 'F', '2' ])
         , -- skip <|  
             test "superlist at end, string list" <|
                 \() -> Expect.equal Superlist (sublist [ "ef", "dd", "ca", "bn", "aab" ] [ "ef", "dd", "ca" ])
