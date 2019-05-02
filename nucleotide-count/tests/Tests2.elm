@@ -1,7 +1,7 @@
-module Tests exposing (..)
+module Tests2 exposing (..)
 
 import Expect
-import NucleotideCount exposing (nucleotideCounts, version)
+import NucleotideCount2 exposing (nucleotideCounts, version)
 import Test exposing (..)
 
 
