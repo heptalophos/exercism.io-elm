@@ -1,6 +1,6 @@
 module LargestSeriesProduct exposing (largestProduct)
 
-import Maybe exposing (withDefault, andThen)
+import Maybe exposing (withDefault)
 import String exposing (any, toInt, toList, fromList, slice)
 import Char exposing (isDigit)
 import List exposing (foldl, indexedMap, map, range, maximum)
@@ -13,7 +13,8 @@ largestProduct length series =
             || length > (series |> String.length)
             || length < 0
         product = 
-            toList >> map (\c -> fromList [c] |> toInt >> withDefault 0)      
+            toList 
+            >> map (\c -> fromList [c] |> toInt >> withDefault 0)      
             >> foldl (*) 1
     in 
         if errors then
