@@ -1,0 +1,30 @@
+
+elm-test 0.19.0-rev6
+--------------------
+
+Running 17 tests. 
+To reproduce these results, run: 
+elm-test --fuzz 100 --seed 90557230050158 ~\exercism\elm\largest-series-product\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 982 ms
+Passed:   17
+Failed:   0
+
+
+elm-test 0.19.0-rev6
+--------------------
+
+Running 17 tests. 
+To reproduce these results, run: 
+elm-test --fuzz 100 --seed 230609538227446 ~\exercism\elm\largest-series-product\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 1161 ms
+Passed:   17
+Failed:   0
+
