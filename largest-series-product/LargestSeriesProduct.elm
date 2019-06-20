@@ -19,8 +19,6 @@ largestProduct length series =
     in 
         if errors then
             Nothing
-        else if length == 0 then
-            Just 1
         else
             range 0 ((series |> String.length) - length)
             |> indexedMap (\idx _ -> series |> slice idx (idx + length))
