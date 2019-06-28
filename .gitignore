@@ -1,3 +1,5 @@
+.vscode/
+.ionide/
 elm-stuff/
 /../elm-stuff/
 # .solution.json
