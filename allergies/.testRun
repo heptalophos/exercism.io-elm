@@ -1,0 +1,15 @@
+
+elm-test 0.19.0-rev6
+--------------------
+
+Running 12 tests. 
+To reproduce these results, run: 
+elm-test --fuzz 100 --seed 46561626530274 ~\exercism\elm\allergies\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 416 ms
+Passed:   12
+Failed:   0
+
