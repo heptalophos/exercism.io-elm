@@ -16,6 +16,7 @@ isAllergicTo name score =
 toList : Int -> List String
 toList score =
     keys allergies
+    -- |> filter (\a -> isAllergicTo a score)
     |> filter (flip isAllergicTo score) 
 
 -- auxiliary
