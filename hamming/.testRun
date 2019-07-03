@@ -1,0 +1,15 @@
+
+elm-test 0.19.0-rev6
+--------------------
+
+Running 14 tests. 
+To reproduce these results, run: 
+elm-test --fuzz 100 --seed 250528257779125 ~\exercism\elm\hamming\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 477 ms
+Passed:   14
+Failed:   0
+
