@@ -15,3 +15,22 @@ Duration: 3172 ms
 Passed:   6
 Failed:   0
 
+
+
+
+
+elm-test 0.19.0-rev6
+--------------------
+
+Running 6 tests. 
+
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 21864901605492 ~\exercism\elm\sum-of-multiples\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 443 ms
+Passed:   6
+Failed:   0
+
