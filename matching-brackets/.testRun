@@ -1,0 +1,19 @@
+
+>elm-test
+
+
+elm-test 0.19.0-rev6
+--------------------
+
+Running 15 tests. 
+
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 276297159289446 ~\exercism\elm\matching-brackets\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 399 ms
+Passed:   15
+Failed:   0
+
