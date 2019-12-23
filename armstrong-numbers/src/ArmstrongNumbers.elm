@@ -10,9 +10,9 @@ isArmstrongNumber nb =
             nb 
             |> String.fromInt 
             |> String.toList 
-            |> List.map ( Maybe.withDefault 0
-                          << String.toInt
-                          << String.fromChar ) 
+            |> List.map ( String.fromChar 
+                          >> String.toInt
+                          >> Maybe.withDefault 0 ) 
         digitsCount =
             digits |> List.length
     in
