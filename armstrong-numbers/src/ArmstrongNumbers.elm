@@ -7,9 +7,9 @@ isArmstrongNumber nb =
             nb 
             |> String.fromInt 
             |> String.toList 
-            |> List.map ( String.fromChar 
-                          >> String.toInt
-                          >> Maybe.withDefault 0 ) 
+            |> List.map ( Maybe.withDefault 0
+                          << String.toInt
+                          << String.fromChar ) 
         digitsCount =
             digits |> List.length
         flip fcn x y = 
