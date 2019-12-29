@@ -1,8 +1,5 @@
 module ArmstrongNumbers exposing (isArmstrongNumber)
 
-flip : (a -> b -> c) -> b -> a -> c
-flip f a b = f b a
-
 isArmstrongNumber : Int -> Bool
 isArmstrongNumber nb =
     let 
@@ -10,12 +7,14 @@ isArmstrongNumber nb =
             nb 
             |> String.fromInt 
             |> String.toList 
-            |> List.map ( String.fromChar 
-                          >> String.toInt
-                          >> Maybe.withDefault 0 ) 
+            |> List.map ( Maybe.withDefault 0
+                          << String.toInt
+                          << String.fromChar ) 
         digitsCount =
             digits |> List.length
+        flip fcn x y = 
+            fcn y x
     in
         digits 
-        |> List.foldl (flip (^) digitsCount >> (+)) 0 
+        |> List.foldl ((+) << flip (^) digitsCount) 0 
         |> (==) nb       

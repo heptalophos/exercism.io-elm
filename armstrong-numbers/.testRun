@@ -32,3 +32,39 @@ Duration: 881 ms
 Passed:   9
 Failed:   0
 
+
+
+>elm-test
+
+elm-test 0.19.0-rev6
+--------------------
+
+Running 9 tests. To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 138577395953371 ~\exercism\elm\armstrong-numbers\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 901 ms
+Passed:   9
+Failed:   0
+
+
+
+>elm-test
+
+elm-test 0.19.0-rev6
+--------------------
+
+Running 9 tests. 
+
+To reproduce these results, 
+    run: elm-test --fuzz 100 --seed 61130972860234 ~\exercism\elm\armstrong-numbers\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 367 ms
+Passed:   9
+Failed:   0
+
