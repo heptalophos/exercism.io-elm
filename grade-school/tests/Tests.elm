@@ -1,4 +1,4 @@
-module Tests exposing (..)
+module Tests exposing (tests)
 
 import Expect
 import GradeSchool exposing (addStudent, allStudents, studentsInGrade)
@@ -15,7 +15,7 @@ tests =
                         |> addStudent 2 "Aimee"
                         |> studentsInGrade 2
                     )
-        ,--  skip <|
+        ,-- skip <|
             test "add more students in same class" <|
                 \() ->
                     Expect.equal [ "Blair", "James", "Paul" ]
@@ -25,7 +25,7 @@ tests =
                             |> addStudent 2 "Paul"
                             |> studentsInGrade 2
                         )
-        ,--  skip <|
+        ,-- skip <|
             test "add students to different grades" <|
                 \() ->
                     Expect.equal [ [ "Chelsea" ], [ "Logan" ] ]
@@ -37,7 +37,7 @@ tests =
                          in
                          [ studentsInGrade 3 school, studentsInGrade 7 school ]
                         )
-        ,--  skip <|
+        ,-- skip <|
             test "get students in a grade" <|
                 \() ->
                     Expect.equal [ "Bradley", "Franklin" ]
@@ -47,18 +47,21 @@ tests =
                             |> addStudent 1 "Jeff"
                             |> studentsInGrade 5
                         )
-        ,--  skip <|
+        ,-- skip <|
             test "get all students in the school" <|
                 \() ->
-                    Expect.equal [ ( 3, [ "Kyle" ] ), ( 4, [ "Christopher", "Jennifer" ] ), ( 6, [ "Kareem" ] ) ]
+                    Expect.equal [ ( 1, [ "Anna", "Barb", "Charlie" ] ), ( 2, [ "Alex", "Peter", "Zoe" ] ), ( 3, [ "Jim" ] ) ]
                         (GradeSchool.empty
-                            |> addStudent 4 "Jennifer"
-                            |> addStudent 6 "Kareem"
-                            |> addStudent 4 "Christopher"
-                            |> addStudent 3 "Kyle"
+                            |> addStudent 2 "Peter"
+                            |> addStudent 1 "Anna"
+                            |> addStudent 1 "Barb"
+                            |> addStudent 2 "Zoe"
+                            |> addStudent 2 "Alex"
+                            |> addStudent 3 "Jim"
+                            |> addStudent 1 "Charlie"
                             |> allStudents
                         )
-        ,--  skip <|
+        ,-- skip <|
             test "get students in a non-existent grade" <|
                 \() -> Expect.equal [] (studentsInGrade 1 GradeSchool.empty)
         ]
