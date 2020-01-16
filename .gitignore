@@ -2,6 +2,5 @@
 .ionide/
 elm-stuff/
 /../elm-stuff/
-# .solution.json
 cleanup.*
 package-lock.json
