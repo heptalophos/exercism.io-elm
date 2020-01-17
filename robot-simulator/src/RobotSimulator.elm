@@ -28,15 +28,20 @@ defaultRobot =
 
 turnRight : Robot -> Robot
 turnRight robot =
-    Robot (turn robot.bearing [North, East, South, West]) 
-          robot.coordinates
+    let 
+        rightFace = turn robot.bearing clockwise
+        samePosition = robot.coordinates
+    in 
+        Robot rightFace samePosition
 
 
 turnLeft : Robot -> Robot
 turnLeft robot =
-    robot |> turnRight >> turnRight >> turnRight
-    -- Robot (turn robot.bearing [North, West, South, East]) 
-    --       robot.coordinates
+    let 
+        leftFace = turn robot.bearing counterClockwise
+        samePosition = robot.coordinates
+    in 
+        Robot leftFace samePosition
 
 
 advance : Robot -> Robot
@@ -45,9 +50,9 @@ advance robot =
         {x, y} = robot.coordinates 
     in 
         case robot.bearing of
-            North -> Robot North { x = x, y = y + 1 }
+            North -> Robot North { y = y + 1, x = x }
             East  -> Robot East  { x = x + 1, y = y }
-            South -> Robot South { x = x, y = y - 1 }
+            South -> Robot South { y = y - 1, x = x }
             West  -> Robot West  { x = x - 1, y = y }
 
 
@@ -79,3 +84,11 @@ turn bearing directions =
                 True -> d2
                 _    -> turn bearing (d2 :: tail)
         _ -> North
+
+
+clockwise : List Bearing
+clockwise = [North, East, South, West]
+
+
+counterClockwise : List Bearing
+counterClockwise = [North, West, South, East]
