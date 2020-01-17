@@ -15,6 +15,7 @@ Duration: 4121 ms
 Passed:   15
 Failed:   0
 
+
 Success! Compiled 55 modules.
 Successfully generated /dev/null
 Success! Compiled 16 modules.
@@ -30,5 +31,22 @@ TEST RUN PASSED
 
 Duration: 7061 ms
 Passed:   15
+Failed:   0
+
+
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 14 tests. 
+
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 221125105459600 ~\exercism\elm\run-length-encoding\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 4883 ms
+Passed:   14
 Failed:   0
 
