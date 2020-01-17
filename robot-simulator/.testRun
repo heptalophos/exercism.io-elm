@@ -45,3 +45,20 @@ Duration: 396 ms
 Passed:   26
 Failed:   0
 
+
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 26 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 144674689110815 ~\exercism\elm\robot-simulator\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 1558 ms
+Passed:   26
+Failed:   0
+
+
