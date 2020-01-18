@@ -1,4 +1,4 @@
-module Tests exposing (..)
+module Tests exposing (tests)
 
 import Expect
 import ScrabbleScore exposing (scoreWord)
@@ -7,37 +7,37 @@ import Test exposing (..)
 
 tests : Test
 tests =
-    describe "Grains"
+    describe "ScrabbleScore"
         [ test "lowercase letter" <|
             \() -> Expect.equal 1 (scoreWord "a")
-        ,-- skip <|
+        ,--  skip <|
             test "uppercase letter" <|
                 \() -> Expect.equal 1 (scoreWord "A")
-        ,-- skip <|
+        ,--  skip <|
             test "valuable letter" <|
                 \() -> Expect.equal 4 (scoreWord "f")
-        ,-- skip <|
+        ,--  skip <|
             test "short word" <|
                 \() -> Expect.equal 2 (scoreWord "at")
-        ,-- skip <|
+        ,--  skip <|
             test "short, valuable word" <|
                 \() -> Expect.equal 12 (scoreWord "zoo")
-        ,-- skip <|
+        ,--  skip <|
             test "medium word" <|
                 \() -> Expect.equal 6 (scoreWord "street")
-        ,-- skip <|
+        ,--  skip <|
             test "medium, valuable word" <|
                 \() -> Expect.equal 22 (scoreWord "quirky")
-        ,-- skip <|
+        ,--  skip <|
             test "long, mixed-case word" <|
                 \() -> Expect.equal 41 (scoreWord "OxyphenButazone")
-        ,-- skip <|
+        ,--  skip <|
             test "english-like word" <|
                 \() -> Expect.equal 8 (scoreWord "pinata")
-        ,-- skip <|
+        ,--  skip <|
             test "non-english letter is not scored" <|
                 \() -> Expect.equal 7 (scoreWord "piñata")
-        ,-- skip <|
+        ,--  skip <|
             test "empty input" <|
                 \() -> Expect.equal 0 (scoreWord "")
         ]
