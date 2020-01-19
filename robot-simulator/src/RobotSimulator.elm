@@ -61,8 +61,10 @@ simulate directions robot =
     directions |> toList |> foldl execute robot
 
 
--- auxiliary
+-- auxiliary fcns
 
+-- Convert the instructions in a program, 
+-- to actions
 execute : Char -> Robot -> Robot
 execute instruction robot =
     case instruction of
@@ -76,9 +78,13 @@ execute instruction robot =
             robot |> identity
 
 
+-- A generic turn function : find the current bearing 
+-- in a list of bearings (which serves as a sequence 
+-- of orientations, expressing a turning rule-set) and 
+-- assume the next bearing in the list.
 turn : Bearing -> List Bearing -> Bearing
-turn bearing directions =
-    case directions of 
+turn bearing orientations =
+    case orientations of 
         d1 :: d2 :: tail ->
             case d1 == bearing of 
                 True -> d2
@@ -86,9 +92,11 @@ turn bearing directions =
         _ -> North
 
 
+-- The clockwise-by-90-degrees turns sequence 
 clockwise : List Bearing
 clockwise = [North, East, South, West]
 
 
+-- And the counterclockwise one 
 counterClockwise : List Bearing
 counterClockwise = [North, West, South, East]
