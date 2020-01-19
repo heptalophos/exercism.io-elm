@@ -32,3 +32,20 @@ Duration: 3995 ms
 Passed:   11
 Failed:   0
 
+
+
+>elm-test
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 11 tests. 
+To reproduce these results, run: 
+elm-test --fuzz 100 --seed 18646097975308 ~\exercism\elm\scrabble-score\tests\Tests.elm
+
+TEST RUN PASSED
+
+Duration: 701 ms
+Passed:   11
+Failed:   0
+
