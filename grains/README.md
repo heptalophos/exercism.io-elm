@@ -6,14 +6,14 @@ on each square doubles.
 There once was a wise servant who saved the life of a prince. The king
 promised to pay whatever the servant could dream up. Knowing that the
 king loved chess, the servant told the king he would like to have grains
-of wheat. One grain on the first square of a chess board. Two grains on
-the next. Four on the third, and so on.
+of wheat. One grain on the first square of a chess board, with the number
+of grains doubling on each successive square.
 
-There are 64 squares on a chessboard.
+There are 64 squares on a chessboard (where square 1 has one grain, square 2 has two grains, and so on).
 
 Write code that shows:
-- how many grains were on each square, and
-- the total number of grains
+- how many grains were on a given square, and
+- the total number of grains on the chessboard
 
 ## For bonus points
 
@@ -28,31 +28,27 @@ experiment make the code better? Worse? Did you learn anything from it?
 
 ## Elm Installation
 
-Refer to the [Exercism help page](http://exercism.io/languages/elm) for Elm
-installation and learning resources.
+Refer to the [Installing Elm](https://exercism.io/tracks/elm/installation) page
+for information about installing elm.
 
 ## Writing the Code
 
-The first time you start an exercise, you'll need to ensure you have the
-appropriate dependencies installed.
-
-```bash
-$ elm-package install --yes
-```
-
-Execute the tests with:
+The code you have to write is located inside the `src/` directory of the exercise.
+Elm automatically installs packages dependencies the first time you run the tests
+so we can start by running the tests from the exercise directory with:
 
 ```bash
 $ elm-test
 ```
 
-Automatically run tests again when you save changes:
+To automatically run tests again when you save changes:
 
 ```bash
 $ elm-test --watch
 ```
 
-As you work your way through the test suite, be sure to remove the `skip <|`
+As you work your way through the tests suite in the file `tests/Tests.elm`,
+be sure to remove the `skip <|`
 calls from each test until you get them all passing!
 
 ## Source
@@ -60,4 +56,6 @@ calls from each test until you get them all passing!
 JavaRanch Cattle Drive, exercise 6 [http://www.javaranch.com/grains.jsp](http://www.javaranch.com/grains.jsp)
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It is possible to submit an incomplete solution so you can see how others have
+completed the exercise.
