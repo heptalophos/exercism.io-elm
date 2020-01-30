@@ -15,3 +15,20 @@ Duration: 2095 ms
 Passed:   10
 Failed:   0
 
+
+
+
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 10 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 389419411867338 ~\exercism\elm\pangram\tests\Tests.elm
+
+TEST RUN PASSED
+
+Duration: 484 ms
+Passed:   10
+Failed:   0
+
