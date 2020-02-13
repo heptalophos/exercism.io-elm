@@ -1,11 +1,8 @@
 module WordCount exposing (wordCount)
 
-import Dict exposing (Dict, 
-                      update)
+import Dict exposing (Dict, update)
 import String exposing (toLower)
-import Regex exposing (Match, 
-                       replace, 
-                       fromString)
+import Regex exposing (Match, replace, fromString)
 
 
 wordCount : String -> Dict String Int
