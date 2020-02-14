@@ -1,4 +1,7 @@
-module GradeSchool exposing (addStudent, allStudents, empty, studentsInGrade)
+module GradeSchool exposing (addStudent, 
+                             allStudents, 
+                             empty, 
+                             studentsInGrade)
 
 import Dict exposing (Dict)
 
@@ -22,14 +25,17 @@ empty =
 
 addStudent : Grade -> Student -> School -> School
 addStudent grade student school =
-    Debug.todo "Please implement this function"
+    Dict.insert grade 
+                (List.sort 
+                 (student :: studentsInGrade grade school)) 
+                school
 
 
 studentsInGrade : Grade -> School -> List Student
 studentsInGrade grade school =
-    Debug.todo "Please implement this function"
-
+    Dict.get grade school
+    |> Maybe.withDefault []
 
 allStudents : School -> List ( Grade, List Student )
 allStudents school =
-    Debug.todo "Please implement this function"
+    List.map2 (,) (Dict.keys school) (Dict.values school)
