@@ -17,7 +17,7 @@ Failed:   0
 
 
 
-
+> elm-test
 
 elm-test 0.19.1-revision2
 -------------------------
@@ -30,6 +30,24 @@ To reproduce these results, run:
 TEST RUN PASSED
 
 Duration: 415 ms
+Passed:   6
+Failed:   0
+
+
+
+> elm-test
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 6 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 52875636822064 ~\exercism\elm\grade-school\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 547 ms
 Passed:   6
 Failed:   0
 
