@@ -1,13 +1,16 @@
-module GradeSchool exposing (addStudent, 
-                             allStudents, 
-                             empty, 
-                             studentsInGrade)
+module GradeSchool exposing
+    ( addStudent
+    , allStudents
+    , empty
+    , studentsInGrade
+    )
 
-import List exposing (sort, map2)
-import Dict exposing (Dict, get, empty, 
-                      insert, keys, values)
-import Tuple exposing (pair)
+import Dict exposing ( Dict, empty, 
+                       get, insert, 
+                       keys, values)
+import List exposing (map2, sort)
 import Maybe exposing (withDefault)
+import Tuple exposing (pair)
 
 
 type alias Grade =
@@ -29,15 +32,18 @@ empty =
 
 addStudent : Grade -> Student -> School -> School
 addStudent grade student school =
-    insert grade (sort 
-                 (student :: studentsInGrade grade school)) 
-                 school
+    insert grade
+        (sort
+            (student :: studentsInGrade grade school)
+        )
+        school
 
 
 studentsInGrade : Grade -> School -> List Student
 studentsInGrade grade school =
     get grade school
-    |> withDefault []
+        |> withDefault []
+
 
 allStudents : School -> List ( Grade, List Student )
 allStudents school =
