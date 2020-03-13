@@ -15,3 +15,23 @@ Duration: 2278 ms
 Passed:   12
 Failed:   0
 
+
+
+
+>elm-test
+
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 12 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 55680029883604 ~\exercism\elm\strain\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 755 ms
+Passed:   12
+Failed:   0
+
