@@ -3,17 +3,19 @@ module CollatzConjecture exposing (collatz)
 
 collatz : Int -> Result String Int
 collatz start =
-    if start <= 0 then
+    if start < 1 then
         Err "Only positive numbers are allowed"
-    else 
-        Ok (collatzRec 0 start)
+    else  
+        collatzRec start        
 
 
-collatzRec : Int -> Int -> Int
-collatzRec steps start =
+collatzRec : Int -> Result String Int
+collatzRec start =
     if start == 1 then 
-        steps
-    else if start % 2 == 0 then
-        collatzRec (steps + 1) (start // 2)
+        Ok 0
+    else if (start |> remainderBy 2) == 0 then
+        Result.map ((+) 1) 
+                   (collatzRec (start // 2))
     else 
-        collatzRec (steps + 1) (3 * start + 1)
+        Result.map ((+) 1) 
+                   (collatzRec ((3 * start) + 1))
