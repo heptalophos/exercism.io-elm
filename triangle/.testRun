@@ -15,3 +15,22 @@ Duration: 2763 ms
 Passed:   16
 Failed:   0
 
+
+
+
+>elm-test
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 14 tests. 
+To reproduce these results, run: 
+elm-test --fuzz 100 --seed 337875480486936 ~\exercism\elm\triangle\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 3280 ms
+Passed:   14
+Failed:   0
+
