@@ -13,7 +13,7 @@ collatzRec : Int -> Result String Int
 collatzRec start =
     if start == 1 then 
         Ok 0
-    else if (start |> remainderBy 2) == 0 then
+    else if (start |> modBy 2) == 0 then
         Result.map ((+) 1) 
                    (collatzRec (start // 2))
     else 
