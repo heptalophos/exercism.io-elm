@@ -15,3 +15,22 @@ Duration: 3363 ms
 Passed:   10
 Failed:   0
 
+
+
+
+>elm-test
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 10 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 66625345805110 C:\Users\Chris\exercism\elm\difference-of-squares\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 697 ms
+Passed:   10
+Failed:   0
+
