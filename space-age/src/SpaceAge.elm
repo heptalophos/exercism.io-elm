@@ -1,4 +1,5 @@
-module SpaceAge exposing (Planet(..), ageOn)
+module SpaceAge 
+    exposing (Planet(..), ageOn)
 
 
 type Planet
@@ -30,6 +31,5 @@ orbitalPeriod planet =
             Neptune -> 164.791320 * earthYear
 
 ageOn : Planet -> Float -> Float
-ageOn planet seconds = 
-        seconds
-        |> flip (/) (orbitalPeriod planet)
+ageOn planet = 
+        flip (/) (orbitalPeriod planet)
