@@ -7,7 +7,7 @@ Running 8 tests.
 To reproduce these results, run: 
     elm-test --fuzz 100 --seed 33606461433458 ~\exercism\elm\grains\tests\Tests.elm
 
-[4m[32m
+
 TEST RUN PASSED
 
 Duration: 381 ms

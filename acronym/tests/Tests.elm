@@ -12,22 +12,22 @@ tests =
             \_ ->
                 Expect.equal "PNG"
                     (abbreviate "Portable Network Graphics")
-        , -- skip <|
+        ,--  skip <|
             test "lowercase words" <|
                 \_ ->
                     Expect.equal "ROR"
                         (abbreviate "Ruby on Rails")
-        , -- skip <|
+        ,--  skip <|
             test "punctuation" <|
                 \_ ->
                     Expect.equal "FIFO"
                         (abbreviate "First In, First Out")
-        , -- skip <|
+        ,--  skip <|
             test "all caps word" <|
                 \_ ->
                     Expect.equal "GIMP"
                         (abbreviate "GNU Image Manipulation Program")
-        , -- skip <|
+        ,--  skip <|
             test "punctuation without whitespace" <|
                 \_ ->
                     Expect.equal "CMOS"
