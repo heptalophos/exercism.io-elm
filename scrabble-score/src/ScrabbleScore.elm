@@ -5,11 +5,11 @@ import Maybe exposing(withDefault)
 
 
 scoreWord : String -> Int
-scoreWord x =
-    String.toUpper x
-    |> String.split ""
-    |> List.map value
-    |> List.foldl (+) 0
+scoreWord =
+    String.toUpper
+    >> String.split ""
+    >> List.map value
+    >> List.foldl (+) 0
 
 
 value : String -> Int
