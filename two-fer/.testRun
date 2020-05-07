@@ -1,0 +1,16 @@
+>elm-test
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 3 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 26628202288503 ~\exercism\elm\two-fer\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 227 ms
+Passed:   3
+Failed:   0
+
