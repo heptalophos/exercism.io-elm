@@ -6,4 +6,8 @@ import String exposing( concat )
 
 twoFer : Maybe String -> String
 twoFer name =
-    concat ["One for ", withDefault "you" name, ", one for me."]
+    let
+        who = withDefault "you" name
+    in
+        concat ["One for ", who, ", one for me."]
+    
