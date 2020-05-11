@@ -12,6 +12,7 @@ distance left right =
     else
         left 
         |> toList
-        |> (toList >> map2 (\x y -> if x == y then 0 else 1)) right
+        |> (toList >> map2 (\x y -> 
+                        if x == y then 0 else 1)) right
         |> foldl (\x sum -> sum + x) 0
         |> Ok   
