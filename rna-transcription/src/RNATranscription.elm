@@ -23,5 +23,5 @@ toRNA dna =
         case uncons dna of
             Just (hd, tl) -> 
                 map2 cons (transcribe hd) (toRNA tl)
-            Nothing       -> 
+            Nothing -> 
                 Ok ""
