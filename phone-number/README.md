@@ -55,10 +55,8 @@ As you work your way through the test suite, be sure to remove the `skip <|`
 calls from each test until you get them all passing!
 
 ## Source
-
 Event Manager by JumpstartLab [http://tutorials.jumpstartlab.com/projects/eventmanager.html](http://tutorials.jumpstartlab.com/projects/eventmanager.html)
 
 ## Submitting Incomplete Solutions
-
 It is possible to submit an incomplete solution so you can see how others have
 completed the exercise.
