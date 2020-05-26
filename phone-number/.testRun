@@ -15,3 +15,22 @@ Duration: 404 ms
 Passed:   14
 Failed:   0
 
+
+
+>elm-test
+
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 14 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 188670710887403 ~\exercism\elm\phone-number\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 302 ms
+Passed:   14
+Failed:   0
+
