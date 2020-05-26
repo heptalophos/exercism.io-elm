@@ -19,34 +19,34 @@ getNumber =
 
 
 normalize : String -> Maybe String
-normalize string =
+normalize phoneNumber =
     let 
         digits = 
-            string |> filter isDigit
+            phoneNumber |> filter isDigit
     in 
         case digits |> toList of
-            '1' :: tail -> 
-                Just (fromList tail)
+            '1' :: rest -> 
+                Just (fromList rest)
             _ -> 
                 Just digits 
 
 
 validateNumber : String -> Maybe String
-validateNumber string =
-    case length string of
+validateNumber phoneNumber =
+    case length phoneNumber of
         10 -> 
-            Just string
+            Just phoneNumber
         _  -> 
             Nothing
 
 
 validateDigit : Int -> String -> Maybe String
-validateDigit position string =
-    case string |> slice position (position + 1) of
+validateDigit atIndex phoneNumber =
+    case phoneNumber |> slice atIndex (atIndex + 1) of
         "0" -> 
             Nothing
         "1" -> 
             Nothing
         _   -> 
-            Just string
+            Just phoneNumber
         
