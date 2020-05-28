@@ -13,3 +13,18 @@ Duration: 439 ms
 Passed:   9
 Failed:   0
 
+
+
+>elm-test
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 9 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 390496940495040 C:\Users\Chris\exercism\elm\binary-search\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 298 ms
+Passed:   9
+Failed:   0
