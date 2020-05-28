@@ -14,9 +14,13 @@ find target xs =
                     Nothing ->
                         Nothing
                     Just x ->
-                        if low > high then Nothing
-                        else if x < target then search (mid + 1) high     
-                        else if x > target then search low (mid - 1) 
-                        else Just mid
+                        if low > high then 
+                            Nothing
+                        else if x < target then 
+                            search (mid + 1) high     
+                        else if x > target then 
+                            search low (mid - 1) 
+                        else 
+                            Just mid
     in
         search 0 ((xs |> length) - 1)

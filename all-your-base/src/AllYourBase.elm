@@ -27,5 +27,7 @@ rebase inBase digits outBase =
             Nothing
         else
             Just <| representationIn outBase 
-                 <| List.foldl (\d acc -> acc * inBase + d) 0 digits
+                 <| List.foldl (\d acc -> acc * inBase + d) 
+                               0 
+                               digits
             
