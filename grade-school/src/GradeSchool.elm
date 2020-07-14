@@ -5,9 +5,14 @@ module GradeSchool exposing
     , studentsInGrade
     )
 
-import Dict exposing ( Dict, empty, 
-                       get, insert, 
-                       keys, values)
+import Dict
+    exposing
+        ( Dict
+        , get
+        , insert
+        , keys
+        , values
+        )
 import List exposing (map2, sort)
 import Maybe exposing (withDefault)
 import Tuple exposing (pair)

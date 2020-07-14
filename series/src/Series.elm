@@ -11,7 +11,9 @@ slices size input =
             |> List.map (Maybe.withDefault 0)
         sublists list =
             List.range 0 (String.length input - size)
-            |> List.map ( \x -> List.drop x list |> List.take size )
+            |> List.map ( \x -> 
+                                List.drop x list 
+                                |> List.take size)
     in 
         if String.isEmpty input then
             Err "series cannot be empty"
