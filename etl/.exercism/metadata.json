@@ -1,9 +1,9 @@
 {
-    "track":"elm",
-    "exercise":"etl",
-    "id":"ba95542d380c475e9d2255a6a6389158",
-    "url":"https://exercism.io/tracks/elm/exercises/etl/solutions/ba95542d380c475e9d2255a6a6389158",
-    "handle":"heptalophos",
-    "is_requester":true,
-    "auto_approve":false
+    "track": "elm",
+    "exercise": "etl",
+    "id": "ba95542d380c475e9d2255a6a6389158",
+    "url": "https://exercism.io/tracks/elm/exercises/etl/solutions/ba95542d380c475e9d2255a6a6389158",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
