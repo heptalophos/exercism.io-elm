@@ -7,7 +7,10 @@ transform : Dict Int (List String) -> Dict String Int
 transform input =
     let 
         pairs : (Int, List String) -> List (String, Int)
-        pairs (score, letters) = List.map(\letter -> (String.toLower letter, score)) letters
+        pairs (score, letters) = 
+            List.map(\letter -> 
+                        (String.toLower letter, score)) 
+            letters
     in 
         Dict.toList input 
         |> List.concatMap pairs 
