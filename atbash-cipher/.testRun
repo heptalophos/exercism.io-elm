@@ -13,3 +13,22 @@ Duration: 535 ms
 Passed:   10
 Failed:   0
 
+
+
+
+>elm-test
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 10 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 226811358524516 ~\exercism\elm\atbash-cipher\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 898 ms
+Passed:   10
+Failed:   0
+
