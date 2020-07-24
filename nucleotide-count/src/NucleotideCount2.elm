@@ -13,8 +13,12 @@ type alias NucleotideCounts =
 
 nucleotideCounts : String -> NucleotideCounts
 nucleotideCounts sequence =
-    { a = String.indices "A" sequence |> List.length
-    , t = String.indices "T" sequence |> List.length
-    , c = String.indices "C" sequence |> List.length
-    , g = String.indices "G" sequence |> List.length
+    { a = String.indices "A" sequence 
+          |> List.length
+    , t = String.indices "T" sequence 
+          |> List.length
+    , c = String.indices "C" sequence 
+          |> List.length
+    , g = String.indices "G" sequence 
+          |> List.length
     }
