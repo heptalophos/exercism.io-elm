@@ -12,3 +12,21 @@ Duration: 756 ms
 Passed:   8
 Failed:   0
 
+
+
+>elm-test
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 7 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 93060254634707 ~\exercism\elm\nucleotide-count\tests\Tests.elm ~\exercism\elm\nucleotide-count\tests\Tests2.elm
+
+
+TEST RUN PASSED
+
+Duration: 872 ms
+Passed:   7
+Failed:   0
+
