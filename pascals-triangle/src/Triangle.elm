@@ -14,8 +14,10 @@ binomial : Int -> Int -> Int
 --     0
 binomial n k = 
     case (n, k) of
-        (_, 0) -> 1
-        (0, _) -> 0 
+        (_, 0) -> 
+            1
+        (0, _) ->  
+            0 
         (_, _) ->
             binomial (n-1) (k-1) * ((//) n k) 
 
