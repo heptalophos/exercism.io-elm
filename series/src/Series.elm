@@ -7,13 +7,14 @@ slices size input =
         intList = 
             input
             |> String.toList
-            |> List.map (String.fromChar >> String.toInt)
+            |> List.map (String.fromChar 
+                         >> String.toInt)
             |> List.map (Maybe.withDefault 0)
         sublists list =
             List.range 0 (String.length input - size)
             |> List.map ( \x -> 
-                                List.drop x list 
-                                |> List.take size)
+                             List.drop x list 
+                             |> List.take size)
     in 
         if String.isEmpty input then
             Err "series cannot be empty"
