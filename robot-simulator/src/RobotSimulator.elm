@@ -18,12 +18,14 @@ type Bearing
 
 
 type alias Robot =
-    { bearing : Bearing, coordinates : { x : Int, y : Int } }
+    { bearing : Bearing, 
+      coordinates : { x : Int, y : Int } }
 
 
 defaultRobot : Robot
 defaultRobot =
-    { bearing = North, coordinates = { x = 0, y = 0 } }
+    { bearing = North, 
+      coordinates = { x = 0, y = 0 } }
 
 
 turnRight : Robot -> Robot
@@ -50,15 +52,21 @@ advance robot =
         {x, y} = robot.coordinates 
     in 
         case robot.bearing of
-            North -> Robot North { y = y + 1, x = x }
-            East  -> Robot East  { x = x + 1, y = y }
-            South -> Robot South { y = y - 1, x = x }
-            West  -> Robot West  { x = x - 1, y = y }
+            North -> 
+                Robot North { y = y + 1, x = x }
+            East  -> 
+                Robot East  { x = x + 1, y = y }
+            South -> 
+                Robot South { y = y - 1, x = x }
+            West  -> 
+                Robot West  { x = x - 1, y = y }
 
 
 simulate : String -> Robot -> Robot
 simulate directions robot =
-    directions |> toList |> foldl execute robot
+    directions 
+    |> toList 
+    |> foldl execute robot
 
 
 -- auxiliary fcns
@@ -87,16 +95,21 @@ turn bearing orientations =
     case orientations of 
         d1 :: d2 :: tail ->
             case d1 == bearing of 
-                True -> d2
-                _    -> turn bearing (d2 :: tail)
-        _ -> North
+                True -> 
+                        d2
+                _ -> 
+                    turn bearing (d2 :: tail)
+        _ -> 
+            North
 
 
 -- The clockwise-by-90-degrees turns sequence 
 clockwise : List Bearing
-clockwise = [North, East, South, West]
+clockwise = 
+    [North, East, South, West]
 
 
 -- And the counterclockwise one 
 counterClockwise : List Bearing
-counterClockwise = [North, West, South, East]
+counterClockwise = 
+    [North, West, South, East]
