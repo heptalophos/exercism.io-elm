@@ -2,6 +2,12 @@ module TwelveDays exposing (recite)
 
 import Array exposing (fromList, toList, slice)
 
+items : List String
+items = []
+
+days : List String
+days = []
+
 lyrics : List String
 lyrics = 
   [
