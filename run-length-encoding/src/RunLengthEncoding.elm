@@ -15,7 +15,9 @@ encodeRec lst num str =
             if cur == lst then 
                 encodeRec lst (num + 1) rest
             else
-                stringifyNum num ++ lst ++ encodeRec cur 1 rest
+                stringifyNum num ++ 
+                lst ++ 
+                encodeRec cur 1 rest
 
 
 decodeRec : String -> List Char -> String
@@ -24,11 +26,14 @@ decodeRec dig str =
         [] -> ""
         cur::rest -> 
             if Char.isDigit cur then
-                decodeRec (dig ++ String.fromChar cur) rest
+                decodeRec (dig ++ 
+                           String.fromChar cur) 
+                          rest
             else
                 String.repeat
-                    (Maybe.withDefault 1 (String.toInt dig)) 
-                    (String.fromChar cur) ++ decodeRec "" rest             
+                (Maybe.withDefault 1 (String.toInt dig)) 
+                (String.fromChar cur) ++ 
+                decodeRec "" rest             
 
 
 encode : String -> String
