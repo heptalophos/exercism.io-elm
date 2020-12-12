@@ -16,15 +16,15 @@ tests =
     describe "Accumulate"
         [ test "[] Accumulate" <|
             \() -> Expect.equal [] (accumulate square [])
-        ,--  skip <|
+        , skip <|
             test "square Accumulate" <|
                 \() -> Expect.equal [ 1, 4, 9 ] (accumulate square [ 1, 2, 3 ])
-        ,--  skip <|
+        , skip <|
             test "toUpper Accumulate" <|
                 \() ->
                     Expect.equal [ "HELLO", "WORLD" ]
                         (accumulate String.toUpper [ "hello", "world" ])
-        ,--  skip <|
+        , skip <|
             test "reverse Accumulate" <|
                 \() ->
                     Expect.equal [ "olleh", "dlrow" ]
