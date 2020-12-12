@@ -49,3 +49,21 @@ Duration: 459 ms
 Passed:   1
 Failed:   0
 
+
+
+
+>elm-test
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 4 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 208460482207983 ~\exercism\elm\accumulate\tests\Tests.elm
+
+TEST RUN PASSED
+
+Duration: 330 ms
+Passed:   4
+Failed:   0
+
