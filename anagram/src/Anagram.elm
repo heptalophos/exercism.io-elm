@@ -3,7 +3,8 @@ module Anagram exposing (detect)
 isAnagram : String -> String -> Bool
 isAnagram word possible = 
     let
-        toLower = String.toLower
+        toLower = 
+            String.toLower
     in
         (/=) (toLower word) 
              (toLower possible) 
