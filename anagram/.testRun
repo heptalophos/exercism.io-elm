@@ -33,3 +33,21 @@ Duration: 211 ms
 Passed:   20
 Failed:   0
 
+
+
+>elm-test
+
+elm-test 0.19.1-revision2
+-------------------------
+
+Running 20 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 198336377527162 ~\exercism\elm\anagram\tests\Tests.elm
+
+
+TEST RUN PASSED
+
+Duration: 497 ms
+Passed:   20
+Failed:   0
+
