@@ -11,7 +11,7 @@ tests =
         [ test "empty string" <|
             \_ ->
                 Expect.equal [] (transpose [])
-        , skip <|
+        ,-- skip <|
             test "two characters in a row" <|
                 \_ ->
                     Expect.equal
@@ -19,7 +19,7 @@ tests =
                         , "1"
                         ]
                         (transpose [ "A1" ])
-        , skip <|
+        ,-- skip <|
             test "two characters in a column" <|
                 \_ ->
                     Expect.equal
@@ -29,7 +29,7 @@ tests =
                             , "1"
                             ]
                         )
-        , skip <|
+        ,-- skip <|
             test "simple" <|
                 \_ ->
                     Expect.equal
@@ -42,7 +42,7 @@ tests =
                             , "123"
                             ]
                         )
-        , skip <|
+        ,-- skip <|
             test "single line" <|
                 \_ ->
                     Expect.equal
@@ -60,7 +60,7 @@ tests =
                         , "."
                         ]
                         (transpose [ "Single line." ])
-        , skip <|
+        ,-- skip <|
             test "first line longer than second line" <|
                 \_ ->
                     Expect.equal
@@ -86,7 +86,7 @@ tests =
                             , "The fifth line."
                             ]
                         )
-        , skip <|
+        ,-- skip <|
             test "second line longer than first line" <|
                 \_ ->
                     Expect.equal
@@ -112,7 +112,7 @@ tests =
                             , "The second line."
                             ]
                         )
-        , skip <|
+        ,-- skip <|
             test "mixed line length" <|
                 \_ ->
                     Expect.equal
@@ -141,7 +141,7 @@ tests =
                             , "A line."
                             ]
                         )
-        , skip <|
+        ,-- skip <|
             test "square" <|
                 \_ ->
                     Expect.equal
@@ -159,7 +159,7 @@ tests =
                             , "TREND"
                             ]
                         )
-        , skip <|
+        ,-- skip <|
             test "rectangle" <|
                 \_ ->
                     Expect.equal
@@ -179,7 +179,7 @@ tests =
                             , "SEPTETTE"
                             ]
                         )
-        , skip <|
+        ,-- skip <|
             test "triangle" <|
                 \_ ->
                     Expect.equal
