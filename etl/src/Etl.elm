@@ -4,7 +4,7 @@ import Dict exposing (Dict)
 
 
 transform : Dict Int (List String) -> Dict String Int
-transform input =
+transform legacy =
     let 
         pairs : (Int, List String) -> List (String, Int)
         pairs (score, letters) = 
@@ -12,6 +12,6 @@ transform input =
                         (String.toLower letter, score)) 
             letters
     in 
-        Dict.toList input 
+        Dict.toList legacy 
         |> List.concatMap pairs 
         |> Dict.fromList
