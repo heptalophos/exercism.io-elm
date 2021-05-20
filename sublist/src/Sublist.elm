@@ -16,7 +16,8 @@ sublist alist blist =
         xs = alist |> stringify
         ys = blist |> stringify
     in 
-        if xs == ys then Equal
-        else if contains xs ys then Sublist
-        else if contains ys xs then Superlist
-        else Unequal
+        case ((contains xs ys), (contains ys xs)) of
+            (True, True)   -> Equal
+            (True, False)  -> Sublist
+            (False, True)  -> Superlist
+            (False, False) -> Unequal
