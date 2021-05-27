@@ -30,6 +30,7 @@ encode plain =
 
 
 decode : String -> String
-decode cipher = cipher
-                    |> String.filter (\c -> Char.isLower c || Char.isDigit c)
-                    |> String.map atbash
+decode cipher = 
+    cipher
+    |> String.filter (\c -> Char.isLower c || Char.isDigit c)
+    |> String.map atbash
