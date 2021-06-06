@@ -6,7 +6,7 @@ valid input =
 
     let 
         compact = 
-            String.filter (not << (==) ' ')
+            String.filter ((==) ' ' >> not)
 
         isDirty = 
             String.any (Char.isDigit >> not) 
@@ -19,8 +19,7 @@ valid input =
                 [] -> 0
                 [z] -> z
                 (x0::x1::xs) -> 
-                    x0 + 2 * x1 - 
-                    (if x1 >= 5 then 9 else 0) + 
+                    x0 + 2 * x1 - (if x1 >= 5 then 9 else 0) + 
                     (luhn xs)
 
         checksum = 
@@ -31,7 +30,12 @@ valid input =
             >> modBy 10
 
     in
-        case input |> compact |> sanitized of
-            ""  -> False
-            "0" -> False
-            x   -> checksum x == 0            
+        case (input |> compact |> String.length) < 2 of 
+            True ->     
+                False
+            False -> 
+                case input |> compact |> sanitized of
+                    "" -> 
+                        False
+                    x -> 
+                        checksum x == 0            
