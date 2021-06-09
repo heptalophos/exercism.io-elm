@@ -17,3 +17,26 @@ Duration: 12640 ms
 Passed:   7
 Failed:   0
 
+
+
+
+>elm-test
+
+Solving dependencies
+Solving dependencies > Compiling
+Solving dependencies > Compiling > Starting tests
+
+elm-test 0.19.1-revision6
+-------------------------
+
+Running 7 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 362146418763955
+
+
+TEST RUN PASSED
+
+Duration: 16268 ms
+Passed:   7
+Failed:   0
+

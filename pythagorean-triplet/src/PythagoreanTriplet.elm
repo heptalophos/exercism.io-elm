@@ -16,7 +16,7 @@ triplets n =
                     let 
                         c = n - a - b
                     in 
-                        if a^2 + b^2 == c^2
+                        if a * a + b * b == c * c
                         then [(a, b, c)]
                         else []))
 
