@@ -5,30 +5,22 @@ import Set
 
 
 type Triangle
-    = Degenerate
-    | Equilateral
+    = Equilateral
     | Isosceles
     | Scalene
 
 
 triangleKind : number -> number -> number -> Result String Triangle
 triangleKind x y z =
-        if (x <= 0 || 
-            y <= 0 || 
-            z <= 0) then
+        if List.any (\a -> a <= 0) [x, y, z] then
             Result.Err "Invalid lengths"
         else
-        if (x + y < z || 
-            x + z < y || 
-            y + z < x) then
+            if 2 * List.foldl max x [x, y, z] >= 
+               List.sum [x, y, z] then
             Result.Err "Violates inequality"
         else 
-            if (x + y == z || 
-                x + z == y || 
-                y + z == x) then
-            Result.Ok Degenerate
-        else 
-            case Set.size(Set.fromList [x, y, z]) of
+            case Set.size <| Set.fromList [x, y, z] of
                 1 -> Result.Ok Equilateral
                 2 -> Result.Ok Isosceles
-                _ -> Result.Ok Scalene
+                3 -> Result.Ok Scalene
+                _ -> Result.Err "What?"
