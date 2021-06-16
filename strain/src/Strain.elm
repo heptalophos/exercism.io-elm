@@ -13,11 +13,4 @@ keep predicate list =
 
 discard : (a -> Bool) -> List a -> List a
 discard predicate list = 
-    case list of
-        [] ->   
-            []
-        x :: tail ->
-            if (predicate x) then
-                discard predicate tail
-            else
-                x :: (discard predicate tail)
+    keep (predicate >> not) list
