@@ -65,23 +65,21 @@ gifts howMany day =
     in
         prefix ++ cardinal day ++ " " ++ giftOn day
 
-premise : Int -> String
-premise n =
-    "On the " ++ 
-    ordinal n ++ 
-    " day of Christmas " ++ 
-    "my true love gave to me: "
-
-conclusion : Int -> String
-conclusion n =
-    List.range 1 n
-    |> List.reverse
-    |> List.map (gifts n)
-    |> String.join ", "
-
 verse : Int -> String
 verse n =
-    premise n ++ conclusion n ++ "."
+    let
+        premise = 
+            "On the " ++ 
+            ordinal n ++ 
+            " day of Christmas " ++ 
+            "my true love gave to me: "
+        conclusion = 
+            List.range 1 n
+            |> List.reverse
+            |> List.map (gifts n)
+            |> String.join ", "
+    in
+        premise ++ conclusion ++ "."
 
 recite : Int -> Int -> List String
 recite start stop =
