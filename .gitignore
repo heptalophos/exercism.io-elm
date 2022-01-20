@@ -4,4 +4,8 @@ elm-stuff/
 /../elm-stuff/
 cleanup.*
 package-lock.json
+
+HELP.md
+HINTS.md
+
 .fake
