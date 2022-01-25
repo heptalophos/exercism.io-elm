@@ -5,10 +5,10 @@ import String
 
 
 penceToPounds : Int -> Float
-penceToPounds pence =
-    (*) (pence |> toFloat) 0.01
+penceToPounds =
+    toFloat >> (*) 0.01
 
 
 poundsToString : Float -> String
-poundsToString pounds =
-    (++) "£" (pounds |> String.fromFloat) 
+poundsToString =
+    String.fromFloat >> (++) "£"
