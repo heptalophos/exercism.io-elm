@@ -3,8 +3,7 @@ module Anagram exposing (detect)
 isAnagram : String -> String -> Bool
 isAnagram word possible = 
     let
-        toLower = 
-            String.toLower
+        toLower = String.toLower
     in
         (/=) (toLower word) 
              (toLower possible) 
@@ -14,11 +13,8 @@ isAnagram word possible =
 
 sorted : String -> List Char
 sorted text = 
-    text
-    |> String.toList
-    |> List.sort
+    text |> String.toList |> List.sort
 
 detect : String -> List String -> List String
 detect word candidates =
-    List.filter (\x -> isAnagram word x) 
-                candidates
+    List.filter (\x -> isAnagram word x) candidates
