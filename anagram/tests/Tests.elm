@@ -12,97 +12,97 @@ tests =
             \() ->
                 Expect.equal []
                     (detect "diaper" [ "hello", "world", "zombies", "pants" ])
-        , skip <|
+        ,-- skip <|
             test "detects simple anagram" <|
                 \() ->
                     Expect.equal [ "tan" ]
                         (detect "ant" [ "tan", "stand", "at" ])
-        , skip <|
+        ,-- skip <|
             test "does not detect false positives" <|
                 \() ->
                     Expect.equal []
                         (detect "galea" [ "eagle" ])
-        , skip <|
+        ,-- skip <|
             test "detects multiple anagrams" <|
                 \() ->
                     Expect.equal [ "lemons", "melons" ]
                         (detect "solemn" [ "lemons", "cherry", "melons" ])
-        , skip <|
+        ,-- skip <|
             test "does not detect anagram subsets" <|
                 \() ->
                     Expect.equal []
                         (detect "good" [ "dog", "goody" ])
-        , skip <|
+        ,-- skip <|
             test "detects anagram" <|
                 \() ->
                     Expect.equal [ "inlets" ]
                         (detect "listen" [ "enlists", "google", "inlets", "banana" ])
-        , skip <|
+        ,-- skip <|
             test "detects even more anagrams" <|
                 \() ->
                     Expect.equal [ "gallery", "regally", "largely" ]
                         (detect "allergy" [ "gallery", "ballerina", "regally", "clergy", "largely", "leading" ])
-        , skip <|
+        ,-- skip <|
             test "does not detect identical words" <|
                 \() ->
                     Expect.equal [ "cron" ]
                         (detect "corn" [ "corn", "dark", "Corn", "rank", "CORN", "cron", "park" ])
-        , skip <|
+        ,-- skip <|
             test "does not detect non-anagrams with identical checksum" <|
                 \() ->
                     Expect.equal []
                         (detect "mass" [ "last" ])
-        , skip <|
+        ,-- skip <|
             test "detects anagrams case-insensitively" <|
                 \() ->
                     Expect.equal [ "Carthorse" ]
                         (detect "Orchestra" [ "cashregister", "Carthorse", "radishes" ])
-        , skip <|
+        ,-- skip <|
             test "detects anagrams using case-insensitive subject" <|
                 \() ->
                     Expect.equal [ "carthorse" ]
                         (detect "Orchestra" [ "cashregister", "carthorse", "radishes" ])
-        , skip <|
+        ,-- skip <|
             test "detects anagrams using case-insensitive possible matches" <|
                 \() ->
                     Expect.equal [ "Carthorse" ]
                         (detect "orchestra" [ "cashregister", "Carthorse", "radishes" ])
-        , skip <|
+        ,-- skip <|
             test "does not detect a word as its own anagram" <|
                 \() ->
                     Expect.equal []
                         (detect "banana" [ "Banana" ])
-        , skip <|
+        ,-- skip <|
             test "does not detect a anagram if the original word is repeated" <|
                 \() ->
                     Expect.equal []
                         (detect "go" [ "go Go GO" ])
-        , skip <|
+        ,-- skip <|
             test "anagrams must use all letters exactly once (go)" <|
                 \() ->
                     Expect.equal []
                         (detect "tapper" [ "patter" ])
-        , skip <|
+        ,-- skip <|
             test "eliminates anagrams with the same checksum" <|
                 \() ->
                     Expect.equal []
                         (detect "mass" [ "last" ])
-        , skip <|
+        ,-- skip <|
             test "detects unicode anagrams" <|
                 \() ->
                     Expect.equal [ "ΒΓΑ", "γβα" ]
                         (detect "ΑΒΓ" [ "ΒΓΑ", "ΒΓΔ", "γβα" ])
-        , skip <|
+        ,-- skip <|
             test "eliminates misleading unicode anagrams" <|
                 \() ->
                     Expect.equal []
                         (detect "ΑΒΓ" [ "ABΓ" ])
-        , skip <|
+        ,-- skip <|
             test "capital word is not own anagram" <|
                 \() ->
                     Expect.equal []
                         (detect "BANANA" [ "Banana" ])
-        , skip <|
+        ,-- skip <|
             test "anagrams must use all letters exactly once (banana)" <|
                 \() ->
                     Expect.equal []
