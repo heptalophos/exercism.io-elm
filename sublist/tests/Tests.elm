@@ -20,6 +20,9 @@ tests =
             test "1 is not 2" <|
                 \() -> Expect.equal Unequal (sublist [ 1 ] [ 2 ])
         ,-- skip <|
+            test "first list missing additional digits from second list" <|
+                \() -> Expect.equal Unequal (sublist [ 1, 2 ] [ 1, 22 ])
+        ,-- skip <|
             test "compare larger equal lists" <|
                 \() -> Expect.equal Equal (sublist [ 1, 1, 1 ] [ 1, 1, 1 ])
         ,-- skip <|
@@ -61,10 +64,4 @@ tests =
         ,-- skip <|
             test "recurring values unequal" <|
                 \() -> Expect.equal Unequal (sublist [ 1, 2, 1, 2, 3 ] [ 1, 2, 3, 1, 2, 3, 2, 3, 2, 1 ])
-        -- ,skip <|
-        --     test "matching list of 2digit integers" <|
-        --         \() -> Expect.equal Sublist (sublist [ 1, 1, 12 ] [ 1, 1, 1, 2 ])
-        ,-- skip <|
-            test "matching list of chars" <|
-                \() -> Expect.equal Sublist (sublist [ 'a', 'b', 'c' ] [ 'a', 'b', 'c', 'd' ])
         ]
