@@ -1,0 +1,22 @@
+{
+  "blurb": "Make sure the brackets and braces all match.",
+  "authors": [
+    "tuxagon"
+  ],
+  "contributors": [
+    "edgerunner",
+    "jiegillet"
+  ],
+  "files": {
+    "solution": [
+      "src/MatchingBrackets.elm"
+    ],
+    "test": [
+      "tests/Tests.elm"
+    ],
+    "example": [
+      ".meta/src/MatchingBrackets.example.elm"
+    ]
+  },
+  "source": "Ginna Baker"
+}
