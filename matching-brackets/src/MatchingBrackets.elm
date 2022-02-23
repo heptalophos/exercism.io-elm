@@ -1,12 +1,12 @@
 module MatchingBrackets exposing (isPaired)
 
-import String exposing (contains, 
-                        fromChar, 
-                        toList)
+import String exposing (contains, fromChar, toList)
+
 
 isPaired : String -> Bool
 isPaired input =
     paired (toList input) []
+
 
 paired : List Char -> List Char -> Bool
 paired s1 s2 = 
