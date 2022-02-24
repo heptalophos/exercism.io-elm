@@ -1,9 +1,1 @@
-{
-    "track": "elm",
-    "exercise": "largest-series-product",
-    "id": "4bf3d9cfaede4f2abd348ce14ad5f3bc",
-    "url": "https://exercism.io/tracks/elm/exercises/largest-series-product/solutions/4bf3d9cfaede4f2abd348ce14ad5f3bc",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"elm","exercise":"largest-series-product","id":"4bf3d9cfaede4f2abd348ce14ad5f3bc","url":"https://exercism.org/tracks/elm/exercises/largest-series-product","handle":"heptalophos","is_requester":true,"auto_approve":false}
