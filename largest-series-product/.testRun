@@ -70,7 +70,9 @@ Compiling > Starting tests
 elm-test 0.19.1-revision6
 -------------------------
 
-Running 17 tests. To reproduce these results, run: elm-test --fuzz 100 --seed 394516357997367
+Running 17 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 394516357997367
 
 
 TEST RUN PASSED
