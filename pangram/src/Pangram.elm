@@ -4,9 +4,10 @@ import String
 
 isPangram : String -> Bool
 isPangram sentence = 
-    List.all (\letter -> 
-                    String.contains letter 
-                                   (sentence 
-                                    |> String.toLower)) 
-                                   ("abcdefghijklmnopqrstuvwxyz" 
-                                    |> String.split "")
+    let 
+        normal = 
+            sentence |> String.toLower
+        alphaList =
+            "abcdefghijklmnopqrstuvwxyz" |> String.split ""
+    in
+        List.all (\letter -> String.contains letter normal) alphaList
