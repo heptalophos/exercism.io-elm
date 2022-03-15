@@ -12,112 +12,112 @@ tests =
             \() ->
                 Expect.equal "I"
                     (toRoman 1)
-        , skip <|
+        ,-- skip <|
             test "2" <|
                 \() ->
                     Expect.equal "II"
                         (toRoman 2)
-        , skip <|
+        ,-- skip <|
             test "3" <|
                 \() ->
                     Expect.equal "III"
                         (toRoman 3)
-        , skip <|
+        ,-- skip <|
             test "4" <|
                 \() ->
                     Expect.equal "IV"
                         (toRoman 4)
-        , skip <|
+        ,-- skip <|
             test "5" <|
                 \() ->
                     Expect.equal "V"
                         (toRoman 5)
-        , skip <|
+        ,-- skip <|
             test "6" <|
                 \() ->
                     Expect.equal "VI"
                         (toRoman 6)
-        , skip <|
+        ,-- skip <|
             test "9" <|
                 \() ->
                     Expect.equal "IX"
                         (toRoman 9)
-        , skip <|
+        ,-- skip <|
             test "16" <|
                 \() ->
                     Expect.equal "XVI"
                         (toRoman 16)
-        , skip <|
+        ,-- skip <|
             test "27" <|
                 \() ->
                     Expect.equal "XXVII"
                         (toRoman 27)
-        , skip <|
+        ,-- skip <|
             test "48" <|
                 \() ->
                     Expect.equal "XLVIII"
                         (toRoman 48)
-        , skip <|
+        ,-- skip <|
             test "59" <|
                 \() ->
                     Expect.equal "LIX"
                         (toRoman 59)
-        , skip <|
+        ,-- skip <|
             test "66" <|
                 \() ->
                     Expect.equal "LXVI"
                         (toRoman 66)
-        , skip <|
+        ,-- skip <|
             test "93" <|
                 \() ->
                     Expect.equal "XCIII"
                         (toRoman 93)
-        , skip <|
+        ,-- skip <|
             test "141" <|
                 \() ->
                     Expect.equal "CXLI"
                         (toRoman 141)
-        , skip <|
+        ,-- skip <|
             test "163" <|
                 \() ->
                     Expect.equal "CLXIII"
                         (toRoman 163)
-        , skip <|
+        ,-- skip <|
             test "166" <|
                 \() ->
                     Expect.equal "CLXVI"
                         (toRoman 166)
-        , skip <|
+        ,-- skip <|
             test "402" <|
                 \() ->
                     Expect.equal "CDII"
                         (toRoman 402)
-        , skip <|
+        ,-- skip <|
             test "575" <|
                 \() ->
                     Expect.equal "DLXXV"
                         (toRoman 575)
-        , skip <|
+        ,-- skip <|
             test "666" <|
                 \() ->
                     Expect.equal "DCLXVI"
                         (toRoman 666)
-        , skip <|
+        ,-- skip <|
             test "911" <|
                 \() ->
                     Expect.equal "CMXI"
                         (toRoman 911)
-        , skip <|
+        ,-- skip <|
             test "1024" <|
                 \() ->
                     Expect.equal "MXXIV"
                         (toRoman 1024)
-        , skip <|
+        ,-- skip <|
             test "1666" <|
                 \() ->
                     Expect.equal "MDCLXVI"
                         (toRoman 1666)
-        , skip <|
+        ,-- skip <|
             test "3000" <|
                 \() ->
                     Expect.equal "MMM"
