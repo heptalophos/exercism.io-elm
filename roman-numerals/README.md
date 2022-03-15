@@ -1,5 +1,10 @@
 # Roman Numerals
 
+Welcome to Roman Numerals on Exercism's Elm Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
 Write a function to convert from normal numbers to Roman Numerals.
 
 The Romans were a clever bunch. They conquered most of Europe and ruled
@@ -8,7 +13,7 @@ even bikinis. One thing they never discovered though was the number
 zero. This made writing and dating extensive histories of their exploits
 slightly more challenging, but the system of numbers they came up with
 is still in use today. For example the BBC uses Roman numerals to date
-their programmes.
+their programs.
 
 The Romans wrote numbers using letters - I, V, X, L, C, D, M. (notice
 these letters have lots of straight lines and are hence easy to hack
@@ -40,39 +45,21 @@ In Roman numerals 1990 is MCMXC:
 2000=MM
 8=VIII
 
-See also: http://www.novaroma.org/via_romana/numbers.html
-
-## Elm Installation
-
-Refer to the [Installing Elm](https://exercism.io/tracks/elm/installation) page
-for information about installing elm.
-
-## Writing the Code
-
-The first time you start an exercise, you'll need to ensure you have the
-appropriate dependencies installed. Thankfully, Elm makes that easy for you and
-will install dependencies when you try to run tests or build the code.
-
-Execute the tests with:
-
-```bash
-$ elm-test
-```
-
-Automatically run tests again when you save changes:
-
-```bash
-$ elm-test --watch
-```
-
-As you work your way through the test suite, be sure to remove the `skip <|`
-calls from each test until you get them all passing!
+See also: [http://www.novaroma.org/via_romana/numbers.html](http://www.novaroma.org/via_romana/numbers.html)
 
 ## Source
 
-The Roman Numeral Kata [http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals](http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals)
+### Created by
 
-## Submitting Incomplete Solutions
+- @rebelwarrior
 
-It is possible to submit an incomplete solution so you can see how others have
-completed the exercise.
+### Contributed to by
+
+- @jiegillet
+- @nathanielknight
+- @tgecho
+- @tuxagon
+
+### Based on
+
+The Roman Numeral Kata - http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals
