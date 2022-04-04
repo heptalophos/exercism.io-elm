@@ -8,8 +8,8 @@ transpose =
             str 
             |> List.repeat (List.length x - List.length y)
             |> (++) y 
-        folder l m =
-            List.map2 (::) (pad ' ' m l) (pad [] l m)
+        folder r rs =
+            List.map2 (::) (pad ' ' rs r) (pad [] r rs)
     in
         List.map String.toList
         >> List.foldr folder []
