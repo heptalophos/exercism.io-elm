@@ -7,7 +7,7 @@ import Transpose exposing (transpose)
 
 tests : Test
 tests =
-    describe "Hamming"
+    describe "Transpose"
         [ test "empty string" <|
             \_ ->
                 Expect.equal [] (transpose [])
@@ -197,6 +197,26 @@ tests =
                             , "SSSS"
                             , "EEEEE"
                             , "RRRRRR"
+                            ]
+                        )
+        ,-- skip <|
+            test "jagged triangle" <|
+                \_ ->
+                    Expect.equal
+                        [ "123456"
+                        , "1 3456"
+                        , "  3456"
+                        , "  3 56"
+                        , "    56"
+                        , "    5"
+                        ]
+                        (transpose
+                            [ "11"
+                            , "2"
+                            , "3333"
+                            , "444"
+                            , "555555"
+                            , "66666"
                             ]
                         )
         ]
