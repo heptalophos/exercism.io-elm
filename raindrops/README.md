@@ -1,6 +1,11 @@
 # Raindrops
 
-Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors. A factor is a number that evenly divides into another number, leaving no remainder. The simplest way to test if a one number is a factor of another is to use the [modulo operation](https://en.wikipedia.org/wiki/Modulo_operation).
+Welcome to Raindrops on Exercism's Elm Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
+Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors. A factor is a number that evenly divides into another number, leaving no remainder. The simplest way to test if one number is a factor of another is to use the [modulo operation](https://en.wikipedia.org/wiki/Modulo_operation).
 
 The rules of `raindrops` are that if a given number:
 
@@ -15,36 +20,18 @@ The rules of `raindrops` are that if a given number:
 - 30 has both 3 and 5 as factors, but not 7, so the result would be "PlingPlang".
 - 34 is not factored by 3, 5, or 7, so the result would be "34".
 
-## Elm Installation
-
-Refer to the [Installing Elm](https://exercism.io/tracks/elm/installation) page
-for information about installing elm.
-
-## Writing the Code
-
-The code you have to write is located inside the `src/` directory of the exercise.
-Elm automatically installs packages dependencies the first time you run the tests
-so we can start by running the tests from the exercise directory with:
-
-```bash
-$ elm-test
-```
-
-To automatically run tests again when you save changes:
-
-```bash
-$ elm-test --watch
-```
-
-As you work your way through the tests suite in the file `tests/Tests.elm`,
-be sure to remove the `skip <|`
-calls from each test until you get them all passing!
-
 ## Source
 
-A variation on FizzBuzz, a famous technical interview question that is intended to weed out potential candidates. That question is itself derived from Fizz Buzz, a popular children's game for teaching division. [https://en.wikipedia.org/wiki/Fizz_buzz](https://en.wikipedia.org/wiki/Fizz_buzz)
+### Created by
 
-## Submitting Incomplete Solutions
+- @tgecho
 
-It is possible to submit an incomplete solution so you can see how others have
-completed the exercise.
+### Contributed to by
+
+- @nathanielknight
+- @parkerl
+- @tuxagon
+
+### Based on
+
+A variation on FizzBuzz, a famous technical interview question that is intended to weed out potential candidates. That question is itself derived from Fizz Buzz, a popular children's game for teaching division. - https://en.wikipedia.org/wiki/Fizz_buzz
