@@ -7,8 +7,10 @@ remainingTimeInMinutes numberOfLayers minutesAlreadyInOven =
         standardCookingTime : Int
         standardCookingTime = 40
 
-        preparationTime : Int -> Int
-        preparationTime layers = 2 * layers
+        preparation : Int -> Int
+        preparation = (*) 2
+
+        cooking : Int
+        cooking = (-) standardCookingTime minutesAlreadyInOven
     in
-        preparationTime numberOfLayers +
-        standardCookingTime - minutesAlreadyInOven
+        numberOfLayers |> preparation |> (+) cooking
