@@ -4,25 +4,17 @@ import List exposing (map, range)
 
 
 rows : Int -> List (List (Int))
-rows n =
-    let
-        row x = 
-            range 0 x |> map (binomial x)
-    in
-        range 0 (n - 1) |> map row
-    let
-        triangle =
-            [map (binomial (x - 1)) range 0 (x - 1) | x <- range 1]   
-    in
-        flip List.take triangle n
-    -- for a triangle lazy Seq which in haskell is very easy 
-    -- mapping binomial to the range using a list comprehension
-    -- [map (binomial (x - 1)) [0..(x - 1)] | x <- [1..]]
-
-
--- row : Int -> List Int
--- row n = 
---     range 0 n |> map (binomial n)
+rows n = 
+    range 0 (n - 1) |> map(\x -> range 0 x |> map (binomial x))
+    -- let -- Oops, doesn't work in elm 0.19.1 as 
+           -- list comprehensions have been removed
+    --     flip : (a -> b -> c) -> b -> a -> c
+    --     flip f y x = f x y
+    --     triangle : List (List (Int -> Int))
+    --     triangle =
+    --       [map (binomial (x - 1)) [0..(x - 1)] | x <- [1..]]   
+    -- in
+    --     flip List.take triangle n
 
 
 binomial : Int -> Int -> Int
