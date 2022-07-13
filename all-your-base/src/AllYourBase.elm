@@ -1,16 +1,18 @@
 module AllYourBase exposing (rebase)
 
+import List exposing (any, all, isEmpty, foldl, reverse)
+
 
 rebase : Int -> List Int -> Int -> Maybe (List Int)
 rebase inBase digits outBase =
     let 
         errors : Bool
         errors = 
-            List.all (\x -> x == 0) digits
-            || List.any (\x -> x < 0) digits
-            || List.any (\x -> x >= inBase) digits
-            || List.isEmpty digits
-            || List.any (\x -> x < 2) [inBase, outBase]
+            all (\x -> x == 0) digits || 
+            any (\x -> x < 0) digits || 
+            any (\x -> x >= inBase) digits || 
+            isEmpty digits || 
+            any (\x -> x < 2) [inBase, outBase]
 
         representationIn : Int -> Int -> List Int
         representationIn base num =
@@ -21,13 +23,11 @@ rebase inBase digits outBase =
                     else
                         []
             in 
-                digitsIn base num |> List.reverse 
+                digitsIn base num |> reverse 
     in 
         if errors then
             Nothing
         else
             Just <| representationIn outBase 
-                 <| List.foldl (\d acc -> acc * inBase + d) 
-                               0 
-                               digits
+                 <| foldl (\d acc -> acc * inBase + d) 0 digits
             
