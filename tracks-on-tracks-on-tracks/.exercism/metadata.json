@@ -1,9 +1,1 @@
-{
-    "track": "elm",
-    "exercise": "tracks-on-tracks-on-tracks",
-    "id": "97dc4f78628b464abc767fc5d53de12a",
-    "url": "https://exercism.org/tracks/elm/exercises/tracks-on-tracks-on-tracks/solutions/97dc4f78628b464abc767fc5d53de12a",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"elm","exercise":"tracks-on-tracks-on-tracks","id":"97dc4f78628b464abc767fc5d53de12a","url":"https://exercism.org/tracks/elm/exercises/tracks-on-tracks-on-tracks","handle":"heptalophos","is_requester":true,"auto_approve":false}
