@@ -29,11 +29,11 @@ reverseList languages =
 excitingList : List String -> Bool
 excitingList languages =
     case languages of
-        "Elm" :: _ -> 
-            True
+    "Elm" :: _ -> 
+        True
 
-        _ :: "Elm" :: _ ->
-            countLanguages languages < 4
+    _ :: "Elm" :: _ ->
+        countLanguages languages < 4
         
-        _ ->
-            False
+    _ ->
+        False
