@@ -1,19 +1,13 @@
 module ValentinesDay exposing (..)
 
 
-type Approval = Yes 
-                | No 
-                | Maybe
+type Approval = Yes | No | Maybe
 
 
-type Genre = Crime 
-             | Horror 
-             | Romance 
-             | Thriller
+type Genre = Crime | Horror | Romance | Thriller
 
 
-type Cuisine = Korean 
-               | Turkish
+type Cuisine = Korean | Turkish
 
 
 type Activity = BoardGame 
