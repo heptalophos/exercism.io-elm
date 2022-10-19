@@ -1,6 +1,8 @@
-module BinarySearch exposing (find)
+module BinarySearch exposing ( find )
 
-import Array exposing (Array, get, length)
+import Array exposing ( Array, get, length )
+
+import Bitwise exposing ( shiftRightBy )
 
 
 find : Int -> Array Int -> Maybe Int
@@ -8,7 +10,7 @@ find target xs =
     let 
         search low high =
             let 
-                mid = (low + high) // 2
+                mid = shiftRightBy 1 (low + high)
             in 
                 case xs |> (get <| mid) of
                     Nothing ->
