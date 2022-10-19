@@ -1,9 +1,1 @@
-{
-    "track": "elm",
-    "exercise": "bob",
-    "id": "1f745d07c549499eb93acc67a4ba8a3b",
-    "url": "https://exercism.io/tracks/elm/exercises/bob/solutions/1f745d07c549499eb93acc67a4ba8a3b",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"elm","exercise":"bob","id":"1f745d07c549499eb93acc67a4ba8a3b","url":"https://exercism.org/tracks/elm/exercises/bob","handle":"heptalophos","is_requester":true,"auto_approve":false}
