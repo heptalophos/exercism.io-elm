@@ -8,9 +8,8 @@ transform legacy =
     let 
         pairs : (Int, List String) -> List (String, Int)
         pairs (score, letters) = 
-            List.map(\letter -> 
-                        (String.toLower letter, score)) 
-            letters
+            List.map(\letter -> (String.toLower letter, score)) 
+                     letters
     in 
         Dict.toList legacy 
         |> List.concatMap pairs 
