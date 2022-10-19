@@ -44,22 +44,6 @@ Failed:   1
 
 
 
-elm-test 0.19.0-rev6
---------------------
-
-Running 28 tests. To reproduce these results, run: 
-     elm-test --fuzz 100 --seed 211115763719598 ~\exercism\elm\bob\tests\Tests.elm
-
-
-TEST RUN PASSED
-
-Duration: 376 ms
-Passed:   28
-Failed:   0
-
-
-
-
 
 elm-test 0.19.0-rev6
 --------------------
@@ -89,6 +73,26 @@ To reproduce these results, run:
 TEST RUN PASSED
 
 Duration: 507 ms
+Passed:   28
+Failed:   0
+
+
+
+>elm-test
+Compiling
+Compiling > Starting tests
+
+elm-test 0.19.1-revision9
+-------------------------
+
+Running 28 tests. 
+To reproduce these results, run: 
+     elm-test --fuzz 100 --seed 371593757402958
+
+
+TEST RUN PASSED
+
+Duration: 273 ms
 Passed:   28
 Failed:   0
 

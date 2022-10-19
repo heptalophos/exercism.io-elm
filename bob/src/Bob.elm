@@ -1,11 +1,12 @@
-module Bob exposing (hey)
+module Bob exposing ( hey )
 
-import Char exposing (isLower, isUpper)
-import String exposing (all, 
-                        endsWith, 
-                        filter, 
-                        isEmpty, 
-                        trim)
+import Char exposing ( isLower, isUpper )
+import String exposing ( all
+                       , endsWith
+                       , filter
+                       , isEmpty
+                       , trim)
+
 
 hey : String -> String
 hey remark = 
@@ -20,18 +21,21 @@ hey remark =
     else
         "Whatever."
 
+
 silence : String -> Bool
-silence = 
-    isEmpty << trim
+silence = isEmpty << trim
+
 
 shouting : String -> Bool
 shouting msg = 
     all isUpper (filter isAlpha msg) && 
     not (isEmpty (filter isAlpha msg)) 
 
+
 question : String -> Bool
 question = 
     trim >> endsWith "?"
+
 
 isAlpha : Char -> Bool
 isAlpha c = 

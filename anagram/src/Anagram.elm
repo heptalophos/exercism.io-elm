@@ -1,4 +1,10 @@
-module Anagram exposing (detect)
+module Anagram exposing ( detect )
+
+
+sorted : String -> List Char
+sorted text = 
+    text |> String.toList |> List.sort
+    
 
 isAnagram : String -> String -> Bool
 isAnagram word possible = 
@@ -11,9 +17,6 @@ isAnagram word possible =
         (==) (sorted (toLower word))  
              (sorted (toLower possible))
 
-sorted : String -> List Char
-sorted text = 
-    text |> String.toList |> List.sort
 
 detect : String -> List String -> List String
 detect word candidates =
