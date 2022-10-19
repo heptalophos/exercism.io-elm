@@ -1,9 +1,1 @@
-{
-    "track": "elm",
-    "exercise": "accumulate",
-    "id": "bc552ec9bca5401f8197764e4893be38",
-    "url": "https://exercism.org/tracks/elm/exercises/accumulate/solutions/bc552ec9bca5401f8197764e4893be38",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"elm","exercise":"accumulate","id":"bc552ec9bca5401f8197764e4893be38","url":"https://exercism.org/tracks/elm/exercises/accumulate","handle":"heptalophos","is_requester":true,"auto_approve":false}
