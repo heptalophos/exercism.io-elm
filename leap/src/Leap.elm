@@ -1,13 +1,13 @@
-module Leap exposing (isLeapYear)
+module Leap exposing ( isLeapYear )
 
 
 isLeapYear : Int -> Bool
-isLeapYear year =
-    case (modBy 400 year, 
-          modBy 100 year, 
-          modBy 4 year  ) 
-    of
-        (0, 0, 0) -> True
-        (_, 0, 0) -> False
-        (_, _, 0) -> True
-        (_, _, _) -> False
+isLeapYear year = 
+    let 
+        r x = modBy x year
+    in
+        case (r 400, r 100 ,r 4) of
+            (0, 0, 0) -> True
+            (_, 0, 0) -> False
+            (_, _, 0) -> True
+            (_, _, _) -> False

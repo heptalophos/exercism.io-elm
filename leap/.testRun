@@ -17,8 +17,6 @@ Failed:   0
 
 
 
-
-
 elm-test 0.19.0-rev6
 --------------------
 
@@ -36,20 +34,22 @@ Failed:   0
 
 
 
+>elm-test
 
+Compiling
+Compiling > Starting tests
 
-elm-test 0.19.0-rev6
---------------------
+elm-test 0.19.1-revision9
+-------------------------
 
 Running 7 tests. 
-
 To reproduce these results, run: 
-    elm-test --fuzz 100 --seed 273528300778165 ~\exercism\elm\leap\tests\Tests.elm
+    elm-test --fuzz 100 --seed 269006210774171
 
 
 TEST RUN PASSED
 
-Duration: 445 ms
+Duration: 277 ms
 Passed:   7
 Failed:   0
 
