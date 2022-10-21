@@ -1,7 +1,6 @@
 module BinarySearch exposing ( find )
 
 import Array exposing ( Array, get, length )
-
 import Bitwise exposing ( shiftRightBy )
 
 
