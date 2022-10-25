@@ -37,7 +37,6 @@ Failed:   0
 
 
 
-
 >elm-test
 
 Compiling
@@ -48,12 +47,12 @@ elm-test 0.19.1-revision9
 
 Running 8 tests. 
 To reproduce these results, run: 
-    elm-test --fuzz 100 --seed 120389154585496
+    elm-test --fuzz 100 --seed 217792456001602
 
 
 TEST RUN PASSED
 
-Duration: 279 ms
+Duration: 240 ms
 Passed:   8
 Failed:   0
 
