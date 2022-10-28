@@ -1,13 +1,14 @@
 module PhoneNumber exposing (getNumber)
 
 
-import String exposing (length, 
-                        slice, 
-                        filter, 
-                        fromList, 
-                        toList)
-import Char   exposing (isDigit)
-import Maybe  exposing (andThen)
+import String exposing ( length
+                       , slice
+                       , filter
+                       , fromList
+                       , toList
+                       )
+import Char   exposing ( isDigit )
+import Maybe  exposing ( andThen )
 
 
 getNumber : String -> Maybe String
