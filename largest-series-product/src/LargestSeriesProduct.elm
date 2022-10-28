@@ -1,10 +1,10 @@
-module LargestSeriesProduct exposing (largestProduct)
+module LargestSeriesProduct exposing ( largestProduct )
 
 
-import Maybe  exposing (withDefault)
-import String exposing (any, toInt, toList, fromList, slice)
-import Char   exposing (isDigit)
-import List   exposing (foldl, indexedMap, map, range, maximum)
+import Maybe  exposing ( withDefault )
+import String exposing ( any, toInt, toList, fromList, slice )
+import Char   exposing ( isDigit )
+import List   exposing ( foldl, indexedMap, map, range, maximum )
 
 
 largestProduct : Int -> String -> Maybe Int
