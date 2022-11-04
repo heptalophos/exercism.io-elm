@@ -17,8 +17,6 @@ Failed:   0
 
 
 
-
-
 elm-test 0.19.1-revision2
 -------------------------
 
@@ -32,7 +30,6 @@ TEST RUN PASSED
 Duration: 1130 ms
 Passed:   15
 Failed:   0
-
 
 
 
@@ -54,4 +51,3 @@ TEST RUN PASSED
 Duration: 571 ms
 Passed:   15
 Failed:   0
-
