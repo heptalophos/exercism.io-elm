@@ -1,9 +1,1 @@
-{
-    "track": "elm",
-    "exercise": "nucleotide-count",
-    "id": "838b836efb6c48aca3f5889dc04aa469",
-    "url": "https://exercism.io/tracks/elm/exercises/nucleotide-count/solutions/838b836efb6c48aca3f5889dc04aa469",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"elm","exercise":"nucleotide-count","id":"838b836efb6c48aca3f5889dc04aa469","url":"https://exercism.org/tracks/elm/exercises/nucleotide-count","handle":"heptalophos","is_requester":true,"auto_approve":false}
