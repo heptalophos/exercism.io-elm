@@ -1,8 +1,5 @@
-module NucleotideCount exposing (nucleotideCounts, version)
+module NucleotideCount exposing (nucleotideCounts)
 
-version : Int
-version =
-    2
 
 type alias NucleotideCounts =
     { a : Int
@@ -11,16 +8,21 @@ type alias NucleotideCounts =
     , g : Int
     }
 
-nucleotideCounts : String -> NucleotideCounts
+
+nucleotideCounts : String -> Result String NucleotideCounts
 nucleotideCounts sequence =
     let 
-        inc n acc = case n of 
-                'A' -> {acc | a = acc.a + 1}
-                'T' -> {acc | t = acc.t + 1}
-                'C' -> {acc | c = acc.c + 1}
-                'G' -> {acc | g = acc.g + 1}
-                _ -> acc
-    in
-        sequence
-        |> String.toList
-        |> List.foldl inc (NucleotideCounts 0 0 0 0)
+        validStrand = 
+            sequence 
+            |> String.toList
+            |> List.all (\n -> List.member n ("ATCG" |> String.toList)) 
+    in 
+        case validStrand of 
+            True -> 
+                Ok  { a = String.indices "A" sequence |> List.length
+                    , t = String.indices "T" sequence |> List.length
+                    , c = String.indices "C" sequence |> List.length
+                    , g = String.indices "G" sequence |> List.length
+                    }
+            _    -> 
+                Err "Invalid nucleotide in strand" 
