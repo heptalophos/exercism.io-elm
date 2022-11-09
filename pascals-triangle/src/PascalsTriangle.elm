@@ -5,9 +5,7 @@ import List exposing (map, range)
 
 rows : Int -> List (List (Int))
 rows n = 
-    range 0 (n - 1) |> map(\x -> range 0 x |> map (binomial x))
-    -- let -- Oops, doesn't work in elm 0.19.1 as 
-           -- list comprehensions have been removed
+    -- let 
     --     flip : (a -> b -> c) -> b -> a -> c
     --     flip f y x = f x y
     --     triangle : List (List (Int -> Int))
@@ -15,6 +13,10 @@ rows n =
     --       [map (binomial (x - 1)) [0..(x - 1)] | x <- [1..]]   
     -- in
     --     flip List.take triangle n
+    -- Oops, doesn't work in elm 0.19.1, 
+    -- as list comprehensions have been removed
+    range 0 (n - 1) 
+    |> map(\x -> range 0 x |> map (binomial x))
 
 
 binomial : Int -> Int -> Int
