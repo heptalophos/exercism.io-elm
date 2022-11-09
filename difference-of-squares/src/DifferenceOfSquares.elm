@@ -11,7 +11,9 @@ squareOfSum n =
 
 sumOfSquares : Int -> Int
 sumOfSquares n = 
-    List.range 1 n |> List.map (\x -> x ^ 2) |> List.foldl (+)  0
+    List.range 1 n 
+    |> List.map (\x -> x ^ 2) 
+    |> List.foldl (+)  0
 
 
 difference : Int -> Int
