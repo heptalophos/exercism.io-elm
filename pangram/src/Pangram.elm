@@ -7,7 +7,7 @@ isPangram sentence =
     let 
         normal = 
             sentence |> String.toLower
-        alphaList =
+        alphabet =
             "abcdefghijklmnopqrstuvwxyz" |> String.split ""
     in
-        List.all (\letter -> String.contains letter normal) alphaList
+        List.all (\letter -> String.contains letter normal) alphabet
