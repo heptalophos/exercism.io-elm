@@ -1,6 +1,6 @@
 module RnaTranscription exposing (toRNA)
 
-import String exposing (cons, uncons, toList)
+import String exposing (cons, uncons)
 import Result exposing (map2)
 
 toRNA : String -> Result Char String
