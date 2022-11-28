@@ -1,4 +1,4 @@
-module RNATranscription exposing (toRNA)
+module RnaTranscription exposing (toRNA)
 
 import String exposing (cons, uncons, toList)
 import Result exposing (map2)
@@ -21,7 +21,7 @@ toRNA dna =
                     Err nuc
     in
         case uncons dna of
-            Just (hd, tl) -> 
-                map2 cons (transcribe hd) (toRNA tl)
+            Just (head, rest) -> 
+                map2 cons (transcribe head) (toRNA rest)
             Nothing -> 
                 Ok ""
