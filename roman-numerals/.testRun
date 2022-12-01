@@ -32,3 +32,25 @@ TEST RUN PASSED
 Duration: 515 ms
 Passed:   23
 Failed:   0
+
+
+
+>elm-test
+
+Compiling
+Compiling > Starting tests
+
+elm-test 0.19.1-revision9
+-------------------------
+
+Running 25 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 206549194251776
+
+
+TEST RUN PASSED
+
+Duration: 252 ms
+Passed:   25
+Failed:   0
+
