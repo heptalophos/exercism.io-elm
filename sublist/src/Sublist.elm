@@ -17,9 +17,8 @@ sublist alist blist =
     let 
         partOf xs ys = 
             List.range 0 (List.length ys - List.length xs)
-            |> List.any (\x -> 
-                         List.map2 (==) (List.drop x ys) xs
-                         |> List.all (\y -> y))
+            |> List.any (\x -> List.map2 (==) (List.drop x ys) xs
+                               |> List.all (\y -> y))
     in 
         case ((partOf alist blist), (partOf blist alist)) of
             (True, True)   -> Equal

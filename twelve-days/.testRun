@@ -18,25 +18,7 @@ Failed:   0
 
 
 >elm-test
-
-
-elm-test 0.19.1-revision2
--------------------------
-
-Running 15 tests. 
-To reproduce these results, run: 
-    elm-test --fuzz 100 --seed 93672570091287 ~\exercism\elm\twelve-days\tests\Tests.elm
-
-
-TEST RUN PASSED
-
-Duration: 177 ms
-Passed:   15
-Failed:   0
-
-
-
->elm-test
+Thu Jun  17 00:31:12 GTBST 2021
 
 Compiling
 Compiling > Starting tests
@@ -58,27 +40,7 @@ Failed:   0
 
 
 >elm-test
-
-Compiling
-Compiling > Starting tests
-
-elm-test 0.19.1-revision6
--------------------------
-
-Running 15 tests.
-To reproduce these results, 
-    run: elm-test --fuzz 100 --seed 219453020400140
-
-
-TEST RUN PASSED
-
-Duration: 305 ms
-Passed:   15
-Failed:   0
-
-
-
->elm-test
+Wed Nov  30 12:03:01 GTBST 2022
 
 Compiling
 Compiling > Starting tests
@@ -94,6 +56,28 @@ To reproduce these results, run:
 TEST RUN PASSED
 
 Duration: 246 ms
+Passed:   15
+Failed:   0
+
+
+
+>elm-test
+Fri Dec  2 18:32:35 GTBST 2022
+
+Compiling
+Compiling > Starting tests
+
+elm-test 0.19.1-revision9
+-------------------------
+
+Running 15 tests. 
+To reproduce these results, run: 
+    elm-test --fuzz 100 --seed 339769036603670
+
+
+TEST RUN PASSED
+
+Duration: 242 ms
 Passed:   15
 Failed:   0
 
