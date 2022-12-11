@@ -11,11 +11,9 @@ isAnagram word possible =
     let
         toLower = String.toLower
     in
-        (/=) (toLower word) 
-             (toLower possible) 
+        (/=) (toLower word) (toLower possible) 
         && 
-        (==) (sorted (toLower word))  
-             (sorted (toLower possible))
+        (==) (sorted (toLower word)) (sorted (toLower possible))
 
 
 detect : String -> List String -> List String
