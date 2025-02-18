@@ -1,12 +1,10 @@
 module TisburyTreasureHunt exposing (..)
 
--- Consider defining a type alias for TreasureLocation,
--- Treasure, PlaceLocation and Place,
--- and using them in the function type annotations
 type alias TreasureLocation = ( Int, Char )
 type alias PlaceLocation = ( Char, Int )
 type alias Treasure = ( String, TreasureLocation )
 type alias Place = ( String, PlaceLocation )
+
 
 
 placeLocationToTreasureLocation : PlaceLocation -> TreasureLocation
@@ -17,7 +15,7 @@ placeLocationToTreasureLocation placeLocation =
         (int, char)
 
 
-treasureLocationMatchesPlaceLocation : ( Char, Int ) -> ( Int, Char ) -> Bool
+treasureLocationMatchesPlaceLocation : PlaceLocation -> TreasureLocation -> Bool
 treasureLocationMatchesPlaceLocation placeLocation treasureLocation =
    placeLocation |> placeLocationToTreasureLocation
                  |> (==) treasureLocation
@@ -29,8 +27,8 @@ countPlaceTreasures place treasures =
         (_, pLoc) = place
     in
         treasures |> List.map (\(_, tLoc) -> tLoc)
-                  |> List.filter (pLoc |> treasureLocationMatchesPlaceLocation)
-                  |> List.length
+        |> List.filter (pLoc |> treasureLocationMatchesPlaceLocation)
+        |> List.length
 
 
 specialCaseSwapPossible : ( String, TreasureLocation ) -> ( String, PlaceLocation ) -> ( String, TreasureLocation ) -> Bool

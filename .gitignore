@@ -7,5 +7,6 @@ package-lock.json
 
 HELP.md
 HINTS.md
+*.ps1
 
 .fake
