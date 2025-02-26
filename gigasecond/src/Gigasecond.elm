@@ -9,6 +9,4 @@ gigasec =
 
 add : Time.Posix -> Time.Posix
 add =
-    Time.posixToMillis 
-    >> (+) (gigasec * 10 ^ 3)
-    >> Time.millisToPosix 
+    Time.posixToMillis >> (+) (gigasec * 10 ^ 3) >> Time.millisToPosix 
