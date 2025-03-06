@@ -1,28 +1,33 @@
 module MagicianInTraining exposing (..)
 
--- todo: import the Array module
-
+import Array exposing ( Array )
+import Time exposing (every)
 
 getCard : Int -> Array Int -> Maybe Int
-getCard index deck =
-    Debug.todo "Implement getCard function"
+getCard = Array.get
 
 
 setCard : Int -> Int -> Array Int -> Array Int
-setCard index newCard deck =
-    Debug.todo "Implement setCard function"
+setCard = Array.set
 
 
 addCard : Int -> Array Int -> Array Int
-addCard newCard deck =
-    Debug.todo "Implement addCard function"
+addCard  = Array.push
 
 
 removeCard : Int -> Array Int -> Array Int
 removeCard index deck =
-    Debug.todo "Implement removeCard function"
+    let 
+        len = deck |> Array.length
+        sl1 = deck |> Array.slice 0 index
+        sl2 = deck |> Array.slice (index + 1) len
+    in
+        (sl1 |> Array.append) <| sl2 
 
 
 evenCardCount : Array Int -> Int
-evenCardCount deck =
-    Debug.todo "Implement evenCardCount function"
+evenCardCount =
+    let
+        even = (modBy 2) >> (==) 0
+    in
+        Array.filter even >> Array.length
