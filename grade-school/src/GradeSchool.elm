@@ -5,15 +5,13 @@ module GradeSchool exposing
             , Student
             , addStudent
             , allStudents
-            , empty
+            , emptySchool
             , studentsInGrade
             )
 
-import Dict exposing ( Dict, get, insert, keys, values)
-import List exposing (map2, sort)
+import Dict exposing ( Dict, empty, get, insert, values)
+import List exposing (sort, concat, member)
 import Maybe exposing (withDefault)
-import Tuple exposing (pair)
-
 
 type alias Grade = Int
 
@@ -25,23 +23,28 @@ type Result
     = Added
     | Duplicate
 
-empty : School
-empty =
-    Dict.empty
+emptySchool : School
+emptySchool =
+    empty
 
-addStudent : Grade -> Student -> School -> School
+addStudent : Grade -> Student -> School -> (Result, School)
 addStudent grade student school =
-    insert grade
-        (sort
-            (student :: studentsInGrade grade school)
-        )
-        school
+    let 
+        inSchool =  
+            insert grade 
+                (sort (student :: studentsInGrade grade school))
+                school
+        duplicateStudent = 
+            member student (allStudents school)
+    in
+        if duplicateStudent 
+        then (Duplicate, school) 
+        else (Added, inSchool)
 
 studentsInGrade : Grade -> School -> List Student
-studentsInGrade grade school =
-    get grade school
-        |> withDefault []
+studentsInGrade grade =
+    get grade >> withDefault []
 
-allStudents : School -> List ( Grade, List Student )
+allStudents : School -> List Student
 allStudents school =
-    map2 pair (keys school) (values school)
+    school |> concat << values
