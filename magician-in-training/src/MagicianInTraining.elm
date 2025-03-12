@@ -1,7 +1,6 @@
 module MagicianInTraining exposing (..)
 
 import Array exposing ( Array )
-import Time exposing (every)
 
 getCard : Int -> Array Int -> Maybe Int
 getCard = Array.get
