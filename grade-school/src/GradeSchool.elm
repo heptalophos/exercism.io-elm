@@ -1,39 +1,33 @@
 module GradeSchool exposing
-    ( addStudent
-    , allStudents
-    , empty
-    , studentsInGrade
-    )
+            ( Grade
+            , Result(..)
+            , School
+            , Student
+            , addStudent
+            , allStudents
+            , empty
+            , studentsInGrade
+            )
 
-import Dict
-    exposing
-        ( Dict
-        , get
-        , insert
-        , keys
-        , values
-        )
+import Dict exposing ( Dict, get, insert, keys, values)
 import List exposing (map2, sort)
 import Maybe exposing (withDefault)
 import Tuple exposing (pair)
 
 
-type alias Grade =
-    Int
+type alias Grade = Int
 
+type alias Student = String
 
-type alias Student =
-    String
+type alias School = Dict Grade (List Student)
 
-
-type alias School =
-    Dict Grade (List Student)
-
+type Result
+    = Added
+    | Duplicate
 
 empty : School
 empty =
     Dict.empty
-
 
 addStudent : Grade -> Student -> School -> School
 addStudent grade student school =
@@ -43,12 +37,10 @@ addStudent grade student school =
         )
         school
 
-
 studentsInGrade : Grade -> School -> List Student
 studentsInGrade grade school =
     get grade school
         |> withDefault []
-
 
 allStudents : School -> List ( Grade, List Student )
 allStudents school =
