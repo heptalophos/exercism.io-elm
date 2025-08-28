@@ -2,5 +2,5 @@ module EliudsEggs exposing (eggCount)
 
 
 eggCount : Int -> Int
-eggCount n =
+eggCount num =
     Debug.todo "implement this function"
