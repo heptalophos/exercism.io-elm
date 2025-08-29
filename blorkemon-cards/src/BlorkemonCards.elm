@@ -37,7 +37,6 @@ sortByCoolness cards =
         List.sortBy (\c -> (1 - boolToInt c.shiny, -c.power)) cards
     
 
-
 compareShinyPower : Card -> Card -> Order
 compareShinyPower card1 card2 =
     let
@@ -46,8 +45,7 @@ compareShinyPower card1 card2 =
     in
         case compare card1.power card2.power of
             EQ -> compare (boolToInt card1.shiny) (boolToInt card2.shiny)
-            other -> other
-                
+            other -> other            
 
 
 expectedWinner : Card -> Card -> String
