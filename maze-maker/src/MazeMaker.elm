@@ -35,24 +35,15 @@ room =
 branch : Generator Maze -> Generator Maze
 branch mazeGenerator =
     -- Random.lazy (\_ -> Debug.todo "Please implement branch")
-    Random.int 2 5
-        |> Random.andThen
-            (\n ->
-                Random.list n mazeGenerator
-                    |> Random.map Branch
-            )
+    Random.int 2 4
+        |> Random.andThen (Random.list >> (|>) mazeGenerator)
+        |> Random.map Branch
 
 
 maze : Generator Maze
 maze =
     -- Random.lazy (\_ -> Debug.todo "Please implement maze")
     Random.weighted 
-    --     ( 12, deadend )
-    --     [ ( 1, deadend )
-    --     , ( 3, room )
-    --     , ( 6, branch maze )
-    --     ]
-    --     |> Random.andThen identity
         ( 12, deadend )
         [ ( 3, room )
         , ( 5, (\_ -> maze) |> Random.lazy |> branch )
@@ -63,19 +54,9 @@ maze =
 mazeOfDepth : Int -> Generator Maze
 mazeOfDepth depth =
     -- Random.lazy (\_ -> Debug.todo "Please implement mazeOfDepth")
-    case depth <= 0 of
-        True ->
-            -- deadend
-            Random.uniform
-                deadend
-                [ room ]
-                |> Random.andThen identity
-
-        False ->
-            mazeOfDepth (depth - 1)
-                |> branch
-            -- Random.weighted
-            --     [ ( 1, deadend )
-            --     , ( 3, room )
-            --     , ( 6, branch (mazeOfDepth (depth - 1)) )
-            --     ]
+    if depth <= 0 then
+        -- deadend
+        Random.uniform deadend [ room ]
+        |> Random.andThen identity
+    else
+        mazeOfDepth (depth - 1) |> branch
